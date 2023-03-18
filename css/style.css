@@ -1,0 +1,1236 @@
+/* --- FONTS --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); /* Kumbh Sans */
+
+/* --- GLOBAL --- */
+
+ul,
+a,
+button {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  background-color: #ffaa34;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+.small-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  background-color: #ffaa34;
+}
+
+input {
+  border-radius: 3px;
+  border: none;
+}
+
+input:focus {
+  outline: 2px solid #ffaa34;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+/* --- BODY --- */
+
+body {
+  padding: 0;
+  margin: 0;
+  /* Reg. global font style */
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  background-color: rgb(40, 40, 40);
+  color: #f2f2f2;
+}
+
+/* --- HEADER --- */
+
+header {
+  background: #ffaa34;
+}
+
+.active-page {
+  text-decoration: underline;
+  background-color: rgb(40, 40, 40);
+}
+
+.global-banner {
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+
+.navList-banner {
+  display: inline-flex;
+  align-items: center;
+  height: 90px;
+}
+
+.navList-banner li {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navList-banner li:not(.active-page, .logo-store):hover {
+  transition: 0.1s ease-in;
+  background-color: #cb8524;
+  border-radius: 5px;
+}
+
+.logo-banner {
+  height: 60px;
+}
+.listColumn1_banner {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-right: 2em;
+}
+.listColumn2_banner {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.account-banner {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+}
+
+.globalSearchbar {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5em;
+  /* border: 1px solid black; */
+}
+
+.searchbar-form {
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.searchbar-form input[type="text"] {
+  height: 2.5em;
+  padding: 0 10px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.searchbar-form .searchbar-btn {
+  height: 3em;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.searchbar-input {
+  transition: 0.3s ease-in;
+  width: 250px;
+}
+
+.searchbar-input:hover,
+.searchbar-input:focus {
+  transition: 0.3s ease-in;
+  width: 500px;
+}
+
+.searchbar-btn {
+  width: 40px;
+  color: black;
+  background-color: white;
+}
+.searchbar-btn:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  /* Not optimal. Needs adjustments to work good */
+
+  header {
+    height: 100px;
+  }
+
+  .global-banner {
+    display: none;
+  }
+
+  .global-banner_mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .hamburgerMenu_mobile {
+    grid-column: 1;
+    margin: 0 auto;
+    margin: -25px 25px auto auto;
+  }
+
+  .hamburger-icon_mobile {
+  }
+
+  .navList-banner {
+    display: none;
+    background-color: rgb(40, 40, 40);
+    height: fit-content;
+  }
+
+  .navList-banner li {
+    font-size: 2em;
+    padding: 1em;
+  }
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .nav-trigger:checked ~ .navList-banner {
+    display: block;
+  }
+
+  .logo-banner_mobile {
+    grid-column: 2;
+  }
+  .logo-banner {
+    margin-top: 10px;
+    height: 30px;
+  }
+  .cart-banner_mobile {
+    grid-column: 3;
+    margin: 0 auto;
+    margin: -25px 25px auto auto;
+  }
+  .cart-icon_mobile {
+  }
+}
+
+/* Landscape Phone - Small TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .global-banner {
+    display: none;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .global-banner_mobile {
+    display: none;
+  }
+}
+
+/* Big Tablet - Small DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .global-banner_mobile {
+    display: none;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .global-banner_mobile {
+    display: none;
+  }
+}
+
+/* DESKTOP Ultrawide */
+@media only screen and (min-width: 1601px) and (max-width: 3440px) {
+  .global-banner_mobile {
+    display: none;
+  }
+}
+
+/* --- MAIN --- */
+
+main {
+  margin: 1em 2em 2em 2em;
+  transition: 0.3s ease-in-out;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  main {
+    margin: 1em 1.5em 1em 1.5em;
+    transition: 0.3s ease-in-out;
+  }
+}
+/* Landscape MOBILE - small Tablet */
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+  main {
+    margin: 1em 2em 1em 2em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    margin: 1em 3em 1em 3em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* Large TABLET */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  main {
+    margin: 1em 4em 1em 4em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* Extra large Tablet - Small DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  main {
+    margin: 1em 5em 1em 5em;
+    transition: 0.3s ease-in-out;
+  }
+}
+/* DESKTOP Wider */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
+  main {
+    margin: 1em 7.5em 1em 7.5em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* DESKTOP Ultrawide */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
+  main {
+    margin: 1em 10em 1em 10em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* --- FOOTER --- */
+
+footer {
+  background: rgb(60, 60, 60);
+}
+
+.hr-line {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.some-icons_footer {
+  display: flex;
+  width: 100%;
+}
+
+.some-icons-ul_footer {
+  display: inline-flex;
+  gap: 30px;
+  margin: 10px auto 5px auto;
+}
+
+.some-icon1,
+.some-icon2,
+.some-icon3,
+.some-icon4,
+.some-icon5 {
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+}
+
+.some-icon1:hover,
+.some-icon2:hover,
+.some-icon3:hover,
+.some-icon4:hover,
+.some-icon5:hover {
+  background-size: cover;
+}
+
+.some-icon1 {
+  background-image: url("/images/footer/some-icons/facebook-icon-default.png");
+}
+.some-icon1:hover {
+  background-image: url("/images/footer/some-icons/facebook-icon-color.png");
+}
+.some-icon2 {
+  background-image: url("/images/footer/some-icons/youtube-icon-default.png");
+}
+.some-icon2:hover {
+  background-image: url("/images/footer/some-icons/youtube-icon-color.png");
+}
+.some-icon3 {
+  background-image: url("/images/footer/some-icons/instagram-icon-default.png");
+}
+.some-icon3:hover {
+  background-image: url("/images/footer/some-icons/instagram-icon-color.png");
+}
+.some-icon4 {
+  background-image: url("/images/footer/some-icons/twitch-icon-default.png");
+}
+.some-icon4:hover {
+  background-image: url("/images/footer/some-icons/twitch-icon-color.png");
+}
+.some-icon5 {
+  background-image: url("/images/footer/some-icons/twitter-icon-default.png");
+}
+.some-icon5:hover {
+  background-image: url("/images/footer/some-icons/twitter-icon-color.png");
+}
+
+.copyright-section_footer,
+.policy_footer {
+  padding: 0 50px 20px 50px;
+}
+
+.policy_footer {
+  display: flex;
+  gap: 15px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+}
+
+/* --- GAME CONTAINERS --- */
+
+/* --- INDEX --- */
+
+/* Top Container Index */
+
+.topGameContainer_index {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* GameContainer Index */
+
+.gameContainerHeader {
+  text-align: center;
+}
+
+.gameContainer_index {
+  grid-column: 1;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px rgb(16, 28, 45);
+}
+
+.GameContainer {
+  display: grid;
+  grid-template-areas:
+    "img details"
+    "details2 details2";
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 85% 15%;
+  height: 450px;
+}
+
+/* Left Container */
+.gameContainer-1 {
+  grid-area: img;
+}
+
+.gameMainImage {
+  background-color: white;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Right Container */
+.gameContainer-2 {
+  grid-area: details;
+  background: rgb(16, 28, 45);
+  padding: 1em 2em;
+}
+
+.gameTitle {
+  margin: 0;
+}
+
+.gameGenres {
+  display: flex;
+  padding: 0;
+  gap: 1em;
+}
+
+/* Bottom Container */
+.gameContainer-3 {
+  grid-area: details2;
+  display: flex;
+  background: rgb(30, 53, 84);
+  align-items: center;
+}
+
+.gamePlatform {
+  padding-left: 1em;
+}
+
+.gamePlatforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.gamePrice {
+  margin: 0 20px 0 auto;
+}
+
+/* SideContainer Index */
+
+.sideGameContainer_index {
+  grid-column: 2;
+}
+
+.sideContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  border-radius: 5px;
+  margin: 10px 0 10px 10px;
+  background-color: rgb(50, 50, 50);
+  box-shadow: 5px 5px 5px rgb(16, 28, 45);
+}
+
+.sideContainer:hover {
+  background-color: rgb(70, 70, 70);
+}
+
+.sideGameImg {
+  background-color: white;
+  background-size: cover;
+  width: 60px;
+  height: 50px;
+  margin: auto 1em;
+  padding: 10px;
+  border-radius: 5px;
+}
+.sideGameTitle {
+  margin: 1em 0;
+}
+
+/* Top sellers - topGameContainer */
+
+.gameContainer-topSellers_index {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.topGameContainer {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  width: 250px;
+  height: 250px;
+  box-shadow: 5px 5px 5px rgb(16, 28, 45);
+}
+
+.topGameContainer:hover {
+  transition: 0.1s ease-in-out;
+  opacity: 0.8;
+}
+
+.topGameImg {
+  background-color: white;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  grid-row: 1;
+}
+.topGameText {
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: rgb(30, 53, 84);
+}
+.topGameTitle {
+  margin-left: 1.5em;
+  font-weight: 600;
+}
+.topGamePrice {
+  background-color: rgb(67, 67, 67);
+  padding: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 1.5em 0 auto;
+}
+/* Used games - subGameContainer */
+
+.gamesContainer-usedGames_index {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.subGameContainer {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  width: 250px;
+  height: 250px;
+  box-shadow: 5px 5px 5px rgb(16, 28, 45);
+}
+
+.subGameContainer:hover {
+  transition: 0.1s ease-in-out;
+  opacity: 0.8;
+}
+
+.subGameImg {
+  background-color: white;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  grid-row: 1;
+}
+.subGameText {
+  grid-row: 2;
+  background: rgb(30, 53, 84);
+}
+.subGameTitle {
+  margin: 1em 0 0 1.5em;
+  font-weight: 600;
+}
+.subGamePriceContainer {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 10px;
+}
+.subGameDiscountPercentage {
+  padding: 5px;
+  background-color: darkgreen;
+  color: rgb(162, 255, 23);
+  font-size: 2em;
+}
+.subGamePrices {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(67, 67, 67);
+  height: 40px;
+  width: 120px;
+  padding: 5px;
+}
+.subGameOldPrice {
+  margin: 0 0 0 auto;
+  text-decoration: line-through;
+  color: rgb(160, 160, 160);
+}
+
+.subGameNewPrice {
+  margin: 0 auto 0 0;
+  color: rgb(162, 255, 23);
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 479px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    /* gap: 1em; */
+    transition: gap 0.3s ease-in-out;
+  }
+}
+
+/* Landscape Phone - Small TABLET */
+@media only screen and (min-width: 800px) and (max-width: 1099px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 2em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 1150px) and (max-width: 1449px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 3.5em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+
+/* Big Tablet - Smaller DESKTOP */
+@media only screen and (min-width: 1450px) and (max-width: 1749px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 2em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 1450px) and (max-width: 1749px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 2em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1799px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 3.5em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 1800px) and (max-width: 1999px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 3em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 2000px) and (max-width: 2099px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 2em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 2100px) and (max-width: 2299px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 3em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 2300px) and (max-width: 2499px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 4em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 2500px) and (max-width: 3440px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 5em;
+    transition: gap 0.3s ease-in-out;
+  }
+}
+
+/* DESKTOP Ultrawide */
+/* @media only screen and (min-width: 1601px) and (max-width: 3440px) {
+  .gameContainer-topSellers_index,
+  .gamesContainer-usedGames_index {
+    gap: 4em;
+    transition: gap 0.3s ease-in-out;
+  }
+} */
+
+/* --- PRODUCTDETAILS --- */
+
+.body_productDetails {
+  background-image: linear-gradient(RGB(16, 33, 50), RGB(36, 65, 107));
+}
+
+.productDetailsContainer {
+}
+
+/* Container 1 */
+.detailsSection1 {
+}
+
+.detailsGameTitle {
+  margin: 30px 0 10px 10%;
+}
+
+.details-mainImage {
+  background-size: cover;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.detailsImagesContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  /* border: 1px solid green; */
+  width: 70%;
+  height: 80px;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.detailsImg {
+  background-size: cover;
+  width: 140px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.detailsGenreContainer {
+  padding: 30px 0 0 0;
+}
+
+.detailsGenre {
+  display: inline-flex;
+  margin: 10px 0;
+}
+
+/* Container 2 */
+.detailsSection2 {
+  /* border: 2px solid black; */
+  height: 600px;
+  margin-top: 80px;
+}
+
+.detailsPrice {
+  margin-left: 40px;
+}
+.detailsBuyNow-btn,
+.detailsCart-btn,
+.detailsWishlist-btn {
+  display: block;
+  width: 50%;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.detailsBuyNow-btn {
+  background-color: orange;
+}
+.detailsBuyNow-btn:hover {
+  background-color: rgb(255, 184, 51);
+  color: black;
+}
+
+.detailsCart-btn {
+  background-color: rgb(20, 150, 20);
+}
+.detailsCart-btn:hover {
+  background-color: rgb(0, 200, 0);
+  color: black;
+}
+.detailsWishlist-btn {
+  background-color: darkcyan;
+}
+
+.detailsWishlist-btn:hover {
+  background-color: rgb(121, 212, 212);
+  color: black;
+}
+
+.detailsGameInfo li:not(.detailsPlatforms li) {
+  margin-bottom: 30px;
+}
+
+.detailsPlatforms {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .productDetailsContainer {
+    display: block;
+    margin: 0 10px 0 10px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .productDetailsContainer {
+    display: block;
+    margin: 0 20px 0 20px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .productDetailsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 50px 0 50px;
+  }
+}
+
+/* --- ABOUT --- */
+
+.contentContainer_about {
+}
+
+.Header_about {
+  text-align: center;
+  padding: 20px;
+}
+
+.section1_about {
+  margin: 0 100px 0 100px;
+}
+
+.para1_about {
+}
+.section2_about,
+.section3_about {
+  margin: 0 100px 0 100px;
+  margin-bottom: 50px;
+}
+
+.section2_about,
+.section3_about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.section2-header_about,
+.section2-header_about {
+  grid-column: 1;
+}
+.para2_about,
+.para3_about {
+  grid-column: 1;
+}
+
+.section2-img_about,
+.section3-img_about {
+  grid-column: 2;
+  background-image: url(/images/about/questionmark.jpg);
+  background-size: cover;
+  border-radius: 5px;
+  margin: -60px auto 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+/* --- SIGN IN --- */
+.contentContainer_signIn {
+  width: 500px;
+  height: 700px;
+  margin: 250px auto;
+  background-color: #ffaa34;
+  border-radius: 5px;
+  color: black;
+}
+.logoContainer_signIn {
+  display: flex;
+  height: 150px;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  padding: 30px 0 10px 0;
+  align-items: center;
+}
+
+.gamehub-logo_signIn {
+  background-image: url(/images/div/gameHub-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+.header_singIn {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formContainer_signIn {
+  width: 350px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.inpEmail_signUp,
+.inpPass_signUp {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.remember-forgot_signIn {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].checkbox_signIn {
+  /* Hide the default checkbox */
+  display: none;
+}
+
+.checkbox_signIn + label:before {
+  /* Custom checkbox style */
+  position: relative;
+  top: 3px;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.checkbox_signIn:checked + label:before {
+  /* Custom checkbox style when checked */
+  position: relative;
+  top: 3px;
+  content: "\2714";
+  font-size: 17px;
+  color: white;
+  background-color: blue;
+}
+
+.forgot-password {
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+.bottomContainer_signIn {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.signUp-link_signIn a {
+  text-decoration: underline;
+  float: right;
+}
+
+.login-btn,
+.go-back-btn {
+  display: block;
+  width: inherit;
+  margin: 20px auto 0 auto;
+}
+
+.login-btn {
+  background-color: rgb(62, 62, 255);
+}
+.go-back-btn {
+  background-color: rgb(5, 5, 48);
+  width: 100%;
+}
+
+/* --- CONTACT --- */
+
+.infoContainer_contact {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section1_contact {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section2_contact,
+.section3_contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 50px;
+}
+
+.header_contact {
+  grid-column: 1;
+}
+.para_contact {
+  grid-column: 1;
+}
+.img_contact {
+  grid-column: 2;
+  width: 200px;
+  height: 200px;
+  margin: -80px auto 20px auto;
+  border: 20px solid white;
+  border-radius: 5px;
+}
+
+.imgSection2_contact {
+  background: white url("/images/contact/chat_support.png") no-repeat
+    center/cover;
+}
+.imgSection3_contact {
+  background: white url("/images/contact/phone_support.png") no-repeat
+    center/cover;
+}
+
+.formHeaderContainer_contact {
+  text-align: center;
+}
+
+.formContainer_contact {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.formContainer_contact input,
+textarea {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  margin: 0 auto 15px auto;
+}
+
+.formContainer_contact textarea {
+  min-height: 150px;
+  max-height: 300px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.customerSubmit-btn_contact {
+  width: 100%;
+  margin: 5px auto 20px auto;
+}
+
+/* CONTACT - FORM VALIDATION */
+
+.form-error {
+  display: none;
+  color: red;
+}
+
+/* --- CART --- */
+
+.mainHeader_cart {
+  text-align: center;
+}
+
+/* - 1.st CONTAINER - */
+.cartContainer_cart {
+  background: rgb(70, 70, 70);
+  border-radius: 5px;
+  width: 40em;
+  height: fit-content;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.productContainer_cart {
+  background: rgb(50, 50, 50);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.productImg_cart {
+  grid-column: 1;
+  background: white;
+  width: 200px;
+}
+
+.productInfo_cart {
+  display: grid;
+  grid-column: 2;
+  grid-template-rows: 1fr 1fr 10px;
+}
+
+.productTitle_cart {
+  grid-row: 1;
+}
+
+.productPlatform_cart {
+  grid-row: 2;
+}
+
+.priceInfo_cart {
+  display: grid;
+  grid-column: 3;
+  grid-template-rows: 1fr 1fr;
+  margin-left: auto;
+}
+
+.productPrice_cart {
+  grid-row: 1;
+}
+.productRemove_cart {
+  grid-row: 3;
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+/* - 2.nd CONTAINER - */
+
+.purchaseContainer_cart {
+  background: rgb(50, 50, 50);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.totalPrice-sum_cart {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: auto;
+}
+
+.buyNow-btn_cart {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: auto;
+}
+
+/* - 3.rd CONTAINER - */
+.infoContainer_cart {
+  background: rgb(50, 50, 50);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+}
+
+.tax-Para_cart {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+}
+.emptyCart_cart {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+.backToStore-btn_cart {
+  grid-column: 1;
+  grid-row: 2;
+}
