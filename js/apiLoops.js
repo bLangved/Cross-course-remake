@@ -6,9 +6,9 @@ export const topGamesList = [];
 export async function fetchTopSellers(){
 
     try{
-        for(let i = 0; i <= 6; i++){
+        for(let i = 0; i <= 13; i++){
         // // Randomizes a number between 4180 and 4200 (gameID)
-        const topGamesIds = Array.from({length: 1}, () => Math.floor(Math.random() * 21) + 4180);
+        const topGamesIds = Array.from({length: 1}, () => Math.floor(Math.random() * 26) + 4180);
         const urlTopGames = `https://api.rawg.io/api/games/${topGamesIds}?key=2657f7a3a75c46e79175cef89041b30b`;
         const responseTopGames = await fetch(urlTopGames);
         const details = await responseTopGames.json();
@@ -33,9 +33,9 @@ export const usedGamesList = [];
 export async function fetchUsedGames(){
 
     try{
-        for(let i = 0; i <= 6; i++){
+        for(let i = 0; i <= 12; i++){
                     // // Randomizes a number between 3000 and 3020 (gameID)
-        const usedGamesIds = Array.from({length: 1}, () => Math.floor(Math.random() * 21) + 3000);
+        const usedGamesIds = Array.from({length: 1}, () => Math.floor(Math.random() * 26) + 3000);
         const urlUsedGames = `https://api.rawg.io/api/games/${usedGamesIds}?key=2657f7a3a75c46e79175cef89041b30b`;
         const responseUsedGames = await fetch(urlUsedGames);
         const details = await responseUsedGames.json();

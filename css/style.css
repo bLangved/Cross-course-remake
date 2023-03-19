@@ -178,8 +178,15 @@ header {
   background-color: rgb(230, 230, 230);
 }
 
-/* MOBILE */
-@media only screen and (max-width: 480px) {
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680) {
+  .global-banner {
+    display: none;
+  }
+}
+
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px) {
   /* Not optimal. Needs adjustments to work good */
 
   header {
@@ -239,36 +246,43 @@ header {
   }
 }
 
-/* Landscape Phone - Small TABLET */
+/* Landscape Phone - Smaller TABLET */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .global-banner {
     display: none;
   }
 }
 
-/* TABLET */
+/* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .global-banner_mobile {
     display: none;
   }
 }
 
-/* Big Tablet - Small DESKTOP */
+/* larger Tablet - Smaller DESKTOP */
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
   .global-banner_mobile {
     display: none;
   }
 }
 
-/* DESKTOP */
+/* Big Tablet - Standard DESKTOP */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .global-banner_mobile {
     display: none;
   }
 }
 
-/* DESKTOP Ultrawide */
-@media only screen and (min-width: 1601px) and (max-width: 3440px) {
+/* Wider DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
+  .global-banner_mobile {
+    display: none;
+  }
+}
+
+/* Ultrawide DESKTOP */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
   .global-banner_mobile {
     display: none;
   }
@@ -276,27 +290,31 @@ header {
 
 /* --- MAIN --- */
 
-main {
-  margin: 1em 2em 2em 2em;
-  transition: 0.3s ease-in-out;
-}
-
-/* MOBILE */
-@media only screen and (max-width: 480px) {
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680) {
   main {
-    margin: 1em 1.5em 1em 1.5em;
+    margin: 1em 0.5em 1em 0.5em;
     transition: 0.3s ease-in-out;
   }
 }
-/* Landscape MOBILE - small Tablet */
-@media only screen and (min-width: 479px) and (max-width: 767px) {
+
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px) {
+  main {
+    margin: 1em 0.75em 1em 0.75em;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+/* Landscape Phone - Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   main {
     margin: 1em 2em 1em 2em;
     transition: 0.3s ease-in-out;
   }
 }
 
-/* TABLET */
+/* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   main {
     margin: 1em 3em 1em 3em;
@@ -304,7 +322,7 @@ main {
   }
 }
 
-/* Large TABLET */
+/* larger Tablet - Smaller DESKTOP */
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
   main {
     margin: 1em 4em 1em 4em;
@@ -312,14 +330,15 @@ main {
   }
 }
 
-/* Extra large Tablet - Small DESKTOP */
+/* Big Tablet - Standard DESKTOP */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   main {
     margin: 1em 5em 1em 5em;
     transition: 0.3s ease-in-out;
   }
 }
-/* DESKTOP Wider */
+
+/* Wider DESKTOP */
 @media only screen and (min-width: 1601px) and (max-width: 1999px) {
   main {
     margin: 1em 7.5em 1em 7.5em;
@@ -327,7 +346,7 @@ main {
   }
 }
 
-/* DESKTOP Ultrawide */
+/* Ultrawide DESKTOP */
 @media only screen and (min-width: 2000px) and (max-width: 3440px) {
   main {
     margin: 1em 10em 1em 10em;
@@ -359,9 +378,7 @@ footer {
 
 .some-icon1,
 .some-icon2,
-.some-icon3,
-.some-icon4,
-.some-icon5 {
+.some-icon3 {
   background-size: cover;
   width: 35px;
   height: 35px;
@@ -369,9 +386,7 @@ footer {
 
 .some-icon1:hover,
 .some-icon2:hover,
-.some-icon3:hover,
-.some-icon4:hover,
-.some-icon5:hover {
+.some-icon3:hover {
   background-size: cover;
 }
 
@@ -388,21 +403,9 @@ footer {
   background-image: url("/images/footer/some-icons/youtube-icon-color.png");
 }
 .some-icon3 {
-  background-image: url("/images/footer/some-icons/instagram-icon-default.png");
-}
-.some-icon3:hover {
-  background-image: url("/images/footer/some-icons/instagram-icon-color.png");
-}
-.some-icon4 {
-  background-image: url("/images/footer/some-icons/twitch-icon-default.png");
-}
-.some-icon4:hover {
-  background-image: url("/images/footer/some-icons/twitch-icon-color.png");
-}
-.some-icon5 {
   background-image: url("/images/footer/some-icons/twitter-icon-default.png");
 }
-.some-icon5:hover {
+.some-icon3:hover {
   background-image: url("/images/footer/some-icons/twitter-icon-color.png");
 }
 
@@ -416,21 +419,44 @@ footer {
   gap: 15px;
 }
 
-/* MOBILE */
-@media only screen and (max-width: 480px) {
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680) {
 }
 
-/* TABLET */
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px) {
+}
+
+/* Landscape Phone - Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 }
 
-/* DESKTOP */
+/* larger Tablet - Smaller DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+}
+
+/* Big Tablet - Standard DESKTOP */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
 }
 
-/* --- GAME CONTAINERS --- */
+/* Wider DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
+}
+
+/* Ultrawide DESKTOP */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
+}
 
 /* --- INDEX --- */
+
+.gameContainerHeader {
+  margin-top: 2em;
+}
+/* --- GAME CONTAINERS --- */
 
 /* Top Container Index */
 
@@ -439,12 +465,6 @@ footer {
   grid-template-columns: 85% 15%;
   width: fit-content;
   margin: 0 auto;
-}
-
-/* GameContainer Index */
-
-.gameContainerHeader {
-  text-align: center;
 }
 
 .gameContainer_index {
@@ -548,213 +568,451 @@ footer {
   margin: 1em 0;
 }
 
-/* Top sellers - topGameContainer */
+/* Top/Used-containers */
 
-.gameContainer-topSellers_index {
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.topGameContainer {
-  display: grid;
-  grid-template-rows: 3fr 1fr;
-  width: 250px;
-  height: 250px;
-  box-shadow: 5px 5px 5px rgb(16, 28, 45);
-}
-
-.topGameContainer:hover {
-  transition: 0.1s ease-in-out;
-  opacity: 0.8;
-}
-
-.topGameImg {
-  background-color: white;
-  background-size: cover;
-  border-radius: 5px 5px 0 0;
-  grid-row: 1;
-}
-.topGameText {
-  grid-row: 2;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  background: rgb(30, 53, 84);
-}
-.topGameTitle {
-  margin-left: 1.5em;
-  font-weight: 600;
-}
-.topGamePrice {
-  background-color: rgb(67, 67, 67);
-  padding: 5px;
-  width: fit-content;
-  height: fit-content;
-  margin: 0 1.5em 0 auto;
-}
-/* Used games - subGameContainer */
-
+.gameContainer-topSellers_index,
 .gamesContainer-usedGames_index {
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
 }
 
+.topGameContainer,
 .subGameContainer {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  width: 250px;
-  height: 250px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  background: rgb(30, 53, 84);
   box-shadow: 5px 5px 5px rgb(16, 28, 45);
 }
 
+.topGameContainer:hover,
 .subGameContainer:hover {
   transition: 0.1s ease-in-out;
   opacity: 0.8;
 }
 
+.topGameImg,
 .subGameImg {
   background-color: white;
   background-size: cover;
-  border-radius: 5px 5px 0 0;
-  grid-row: 1;
 }
+.topGameText,
 .subGameText {
-  grid-row: 2;
-  background: rgb(30, 53, 84);
 }
+.topGameTitle,
 .subGameTitle {
-  margin: 1em 0 0 1.5em;
   font-weight: 600;
 }
+
+/* Top sellers - topGameContainer */
+
+.topGamePrice {
+  background-color: rgb(67, 67, 67);
+  white-space: nowrap;
+  padding: 0.6em 0.3em;
+  margin: 0 1em 0 auto;
+}
+
+/* Used games - subGameContainer */
+
 .subGamePriceContainer {
   display: flex;
   align-items: center;
-  width: fit-content;
-  margin: 0 auto;
-  gap: 10px;
+  gap: 0.2em;
+  margin: 0 1em 0 auto;
+  height: 2.5em;
+  padding: 0.3em;
+  text-align: center;
+  background-color: rgb(67, 67, 67);
 }
 .subGameDiscountPercentage {
-  padding: 5px;
+  padding: 0.5em;
   background-color: darkgreen;
   color: rgb(162, 255, 23);
-  font-size: 2em;
 }
-.subGamePrices {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(67, 67, 67);
-  height: 40px;
-  width: 120px;
-  padding: 5px;
-}
+
 .subGameOldPrice {
-  margin: 0 0 0 auto;
   text-decoration: line-through;
   color: rgb(160, 160, 160);
 }
 
 .subGameNewPrice {
-  margin: 0 auto 0 0;
-  color: rgb(162, 255, 23);
   font-weight: 600;
+  color: rgb(162, 255, 23);
 }
 
-/* MOBILE */
-@media only screen and (max-width: 479px) {
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680px) {
+}
+
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
-    /* gap: 1em; */
+    gap: none;
     transition: gap 0.3s ease-in-out;
+  }
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: flex;
+    height: 100px;
+    font-size: 0.8em;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    border-radius: 5px;
+    width: 5em;
+    height: 4em;
+    margin: auto 1em;
+    border: 1px solid white;
+  }
+  .topGameText,
+  .subGameText {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+    width: 70%;
+  }
+
+  /* Top sellers - topGameContainer */
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+    background-color: darkgreen;
+    color: rgb(162, 255, 23);
   }
 }
 
-/* Landscape Phone - Small TABLET */
-@media only screen and (min-width: 800px) and (max-width: 1099px) {
+/* Landscape Phone - Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
-    gap: 2em;
+    gap: none;
     transition: gap 0.3s ease-in-out;
+  }
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+  }
+
+  .topGameImg,
+  .subGameImg {
+  }
+  .topGameText,
+  .subGameText {
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
   }
 }
 
-/* TABLET */
-@media only screen and (min-width: 1150px) and (max-width: 1449px) {
+/* Standard TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 3.5em;
     transition: gap 0.3s ease-in-out;
   }
+
+  /* Top sellers - topGameContainer */
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: grid;
+    grid-template-rows: 175px 75px;
+    width: 300px;
+    height: 250px;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    grid-row: 1;
+  }
+  .topGameText,
+  .subGameText {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
+  }
 }
 
-/* Big Tablet - Smaller DESKTOP */
-@media only screen and (min-width: 1450px) and (max-width: 1749px) {
+/* larger Tablet - Smaller DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2em;
     transition: gap 0.3s ease-in-out;
   }
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: grid;
+    grid-template-rows: 175px 75px;
+    width: 300px;
+    height: 250px;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    grid-row: 1;
+  }
+  .topGameText,
+  .subGameText {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
+  }
 }
-@media only screen and (min-width: 1450px) and (max-width: 1749px) {
+
+/* Big Tablet - Standard DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2em;
     transition: gap 0.3s ease-in-out;
   }
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: grid;
+    grid-template-rows: 175px 75px;
+    width: 300px;
+    height: 250px;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    grid-row: 1;
+  }
+  .topGameText,
+  .subGameText {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
+  }
 }
-/* DESKTOP */
-@media only screen and (min-width: 1601px) and (max-width: 1799px) {
+
+/* Wider DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 3.5em;
     transition: gap 0.3s ease-in-out;
   }
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: grid;
+    grid-template-rows: 175px 75px;
+    width: 300px;
+    height: 250px;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    grid-row: 1;
+  }
+  .topGameText,
+  .subGameText {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
+  }
 }
-@media only screen and (min-width: 1800px) and (max-width: 1999px) {
+/* Ultrawide DESKTOP */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 3em;
     transition: gap 0.3s ease-in-out;
   }
-}
-@media only screen and (min-width: 2000px) and (max-width: 2099px) {
-  .gameContainer-topSellers_index,
-  .gamesContainer-usedGames_index {
-    gap: 2em;
-    transition: gap 0.3s ease-in-out;
+
+  /* Top/Used-containers */
+  .topGameContainer,
+  .subGameContainer {
+    display: grid;
+    grid-template-rows: 175px 75px;
+    width: 300px;
+    height: 250px;
+  }
+
+  .topGameImg,
+  .subGameImg {
+    grid-row: 1;
+  }
+  .topGameText,
+  .subGameText {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+  .topGameTitle,
+  .subGameTitle {
+  }
+
+  /* Top sellers - topGameContainer */
+
+  .topGamePrice {
+  }
+
+  /* Used games - subGameContainer */
+
+  .subGamePriceContainer {
+  }
+  .subGameDiscountPercentage {
+  }
+  .subGamePrices {
+  }
+
+  .subGamePrices p {
   }
 }
-@media only screen and (min-width: 2100px) and (max-width: 2299px) {
+
+@media only screen and (min-width: 2100px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
-    gap: 3em;
-    transition: gap 0.3s ease-in-out;
-  }
-}
-@media only screen and (min-width: 2300px) and (max-width: 2499px) {
-  .gameContainer-topSellers_index,
-  .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 4em;
     transition: gap 0.3s ease-in-out;
   }
 }
-@media only screen and (min-width: 2500px) and (max-width: 3440px) {
+@media only screen and (min-width: 2300px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
+    display: flex;
+    flex-wrap: wrap;
     gap: 5em;
     transition: gap 0.3s ease-in-out;
   }
 }
-
-/* DESKTOP Ultrawide */
-/* @media only screen and (min-width: 1601px) and (max-width: 3440px) {
+@media only screen and (min-width: 2500px) {
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
-    gap: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6em;
     transition: gap 0.3s ease-in-out;
   }
-} */
+}
 
 /* --- PRODUCTDETAILS --- */
 
@@ -767,34 +1025,16 @@ footer {
 
 /* Container 1 */
 .detailsSection1 {
+  /* border: 1px solid white; */
 }
 
 .detailsGameTitle {
-  margin: 30px 0 10px 10%;
 }
 
 .details-mainImage {
   background-size: cover;
-  width: 80%;
+  width: 100%;
   height: 500px;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-
-.detailsImagesContainer {
-  display: flex;
-  flex-wrap: nowrap;
-  /* border: 1px solid green; */
-  width: 70%;
-  height: 80px;
-  align-items: center;
-  margin: 10px auto;
-}
-
-.detailsImg {
-  background-size: cover;
-  width: 140px;
-  height: 70px;
   margin: 0 auto;
   border-radius: 5px;
 }
@@ -810,27 +1050,22 @@ footer {
 
 /* Container 2 */
 .detailsSection2 {
-  /* border: 2px solid black; */
+  /* border: 1px solid white; */
+  margin: 5em 3em;
   height: 600px;
-  margin-top: 80px;
 }
 
-.detailsPrice {
-  margin-left: 40px;
-}
 .detailsBuyNow-btn,
 .detailsCart-btn,
 .detailsWishlist-btn {
   display: block;
-  width: 50%;
+  width: 100%;
   height: 50px;
   margin: 0 auto 10px auto;
-  border-radius: 5px;
   font-weight: 700;
 }
 
 .detailsBuyNow-btn {
-  background-color: orange;
 }
 .detailsBuyNow-btn:hover {
   background-color: rgb(255, 184, 51);
@@ -853,6 +1088,10 @@ footer {
   color: black;
 }
 
+.detailsGameInfo ul {
+  padding: 0;
+}
+
 .detailsGameInfo li:not(.detailsPlatforms li) {
   margin-bottom: 30px;
 }
@@ -864,15 +1103,95 @@ footer {
   gap: 10px;
 }
 
-/* MOBILE */
-@media only screen and (max-width: 480px) {
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680) {
   .productDetailsContainer {
     display: block;
     margin: 0 10px 0 10px;
   }
 }
 
-/* TABLET */
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px) {
+  .productDetailsContainer {
+    display: block;
+    margin: 0 10px 0 10px;
+  }
+
+  .productDetailsContainer {
+  }
+
+  /* Container 1 */
+
+  .details-mainImage {
+    height: 250px;
+  }
+
+  /* Container 2 */
+  /* .detailsSection2 {
+    height: 600px;
+    margin-top: 80px;
+  }
+
+  .detailsPrice {
+    margin-left: 40px;
+  }
+  .detailsBuyNow-btn,
+  .detailsCart-btn,
+  .detailsWishlist-btn {
+    display: block;
+    width: 50%;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+
+  .detailsBuyNow-btn {
+    background-color: orange;
+  }
+  .detailsBuyNow-btn:hover {
+    background-color: rgb(255, 184, 51);
+    color: black;
+  }
+
+  .detailsCart-btn {
+    background-color: rgb(20, 150, 20);
+  }
+  .detailsCart-btn:hover {
+    background-color: rgb(0, 200, 0);
+    color: black;
+  }
+  .detailsWishlist-btn {
+    background-color: darkcyan;
+  }
+
+  .detailsWishlist-btn:hover {
+    background-color: rgb(121, 212, 212);
+    color: black;
+  }
+
+  .detailsGameInfo li:not(.detailsPlatforms li) {
+    margin-bottom: 30px;
+  }
+
+  .detailsPlatforms {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  } */
+}
+
+/* Landscape Phone - Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .productDetailsContainer {
+    display: block;
+    margin: 0 20px 0 20px;
+  }
+}
+
+/* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .productDetailsContainer {
     display: block;
@@ -880,8 +1199,35 @@ footer {
   }
 }
 
-/* DESKTOP */
+/* larger Tablet - Smaller DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .productDetailsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 50px 0 50px;
+  }
+}
+
+/* Big Tablet - Standard DESKTOP */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .productDetailsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 50px 0 50px;
+  }
+}
+
+/* Wider DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
+  .productDetailsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 50px 0 50px;
+  }
+}
+
+/* Ultrawide DESKTOP */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
   .productDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;

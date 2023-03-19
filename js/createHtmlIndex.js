@@ -83,11 +83,10 @@ let usedGamesHtml = '';
                                         <p class="subGameTitle">${usedGamesList[i].name}</p>
                                         <div class="subGamePriceContainer">
                                             <p class="subGameDiscountPercentage">-30%</p>
-                                            <div class="subGamePrices">
-                                                <p class="subGameOldPrice">300.00 NOK</p>
-                                                <p class="subGameNewPrice">210.00 NOK</p>  
-                                            </div>
+                                            <p class="subGameNewPrice">210.00 NOK</p>  
+                                            <p class="subGameOldPrice">300.00 NOK</p>
                                         </div>
+                                    </div>
                                 </div>
                             </section>
                          </a>`;
@@ -98,22 +97,22 @@ usedGameContainer.innerHTML = usedGamesHtml;
 function updateContainers(topGamesList, usedGamesList){
     const screenWidth = window.innerWidth;
     if (screenWidth > 500) {
-        numContainers = 1;
-    }
-    if (screenWidth > 750) {
-        numContainers = 2;
-    }
-    if (screenWidth > 1000) {
-        numContainers = 3;
-    }
-    if(screenWidth > 1250){
-        numContainers = 4;
-    }
-    if(screenWidth > 1500){
         numContainers = 5;
     }
-    if(screenWidth > 1750){
+    if (screenWidth > 750) {
         numContainers = 6;
+    }
+    if (screenWidth > 1000) {
+        numContainers = 6;
+    }
+    if(screenWidth > 1250){
+        numContainers = 8;
+    }
+    if(screenWidth > 1500){
+        numContainers = 10;
+    }
+    if(screenWidth > 1750){
+        numContainers = 12;
     }
     if(screenWidth > 2000){
         numContainers = 7;

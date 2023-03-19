@@ -17,3 +17,48 @@ font-family: 'Kumbh Sans', sans-serif;
 www.rawg.io
 
 2657f7a3a75c46e79175cef89041b30b
+
+
+
+
+General Media queries viewports sizes
+
+/* Smaller MOBILE */
+@media only screen and (max-width: 349px) and (max-height: 680px){
+
+}
+
+/* Larger MOBILE */
+@media only screen and (max-width: 479px) and (max-height: 960px){
+   
+}
+
+/* Landscape Phone - Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+}
+
+/* Standard TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+/* larger Tablet - Smaller DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  
+}
+
+/* Big Tablet - Standard DESKTOP */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  
+}
+
+/* Wider DESKTOP */
+@media only screen and (min-width: 1601px) and (max-width: 1999px) {
+  
+}
+
+/* Ultrawide DESKTOP */
+@media only screen and (min-width: 2000px) and (max-width: 3440px) {
+  
+}
