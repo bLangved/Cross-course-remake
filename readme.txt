@@ -8,9 +8,6 @@ font-family: 'Kumbh Sans', sans-serif;
 2. 
 
 
-3.
-
-
 
 --- API KEY(S) --- 
 
