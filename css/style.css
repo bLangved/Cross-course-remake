@@ -53,6 +53,10 @@ textarea::placeholder {
   font-size: 1.2em;
 }
 
+p {
+  line-height: 2em;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -293,7 +297,7 @@ header {
 /* Smaller MOBILE */
 @media only screen and (max-width: 349px) and (max-height: 680) {
   main {
-    margin: 1em 0.5em 1em 0.5em;
+    margin: 1em 0.75em 1em 0.75em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -301,7 +305,7 @@ header {
 /* Larger MOBILE */
 @media only screen and (max-width: 479px) and (max-height: 960px) {
   main {
-    margin: 1em 0.75em 1em 0.75em;
+    margin: 1em 1em 1em 1em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -309,7 +313,7 @@ header {
 /* Landscape Phone - Smaller TABLET */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   main {
-    margin: 1em 2em 1em 2em;
+    margin: 1em 3em 1em 3em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -317,7 +321,7 @@ header {
 /* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   main {
-    margin: 1em 3em 1em 3em;
+    margin: 1em 5em 1em 5em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -325,7 +329,7 @@ header {
 /* larger Tablet - Smaller DESKTOP */
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
   main {
-    margin: 1em 4em 1em 4em;
+    margin: 1em 6em 1em 6em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -333,7 +337,7 @@ header {
 /* Big Tablet - Standard DESKTOP */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   main {
-    margin: 1em 5em 1em 5em;
+    margin: 1em 7.5em 1em 7.5em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -341,7 +345,7 @@ header {
 /* Wider DESKTOP */
 @media only screen and (min-width: 1601px) and (max-width: 1999px) {
   main {
-    margin: 1em 7.5em 1em 7.5em;
+    margin: 1em 9em 1em 9em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -349,7 +353,7 @@ header {
 /* Ultrawide DESKTOP */
 @media only screen and (min-width: 2000px) and (max-width: 3440px) {
   main {
-    margin: 1em 10em 1em 10em;
+    margin: 1em 12em 1em 12em;
     transition: 0.3s ease-in-out;
   }
 }
@@ -532,6 +536,8 @@ footer {
 }
 
 .gamePrice {
+  background-color: rgb(67, 67, 67);
+  padding: 0.5em;
   margin: 0 20px 0 auto;
 }
 
@@ -640,17 +646,66 @@ footer {
 
 /* Smaller MOBILE */
 @media only screen and (max-width: 349px) and (max-height: 680px) {
+  .sideContainer {
+    display: none;
+  }
 }
 
 /* Larger MOBILE */
 @media only screen and (max-width: 479px) and (max-height: 960px) {
+  /* Top Container Index */
+
+  .topGameContainer_index {
+    display: block;
+  }
+
+  .GameContainer {
+    grid-template-rows: 65% 35%;
+    height: 250px;
+    margin-bottom: 2em;
+  }
+
+  /* Left Container */
+  .gameContainer-1 {
+  }
+
+  /* Right Container */
+  .gameContainer-2 p {
+    display: none;
+  }
+
+  .gameTitle {
+    margin-bottom: 0.5em;
+  }
+
+  /* Bottom Container */
+  .gameContainer-3 {
+    font-size: 0.7em;
+    flex-wrap: wrap;
+  }
+
+  .gamePlatforms {
+    padding-left: 0.5em;
+    gap: 0.5em;
+  }
+
+  .gamePrice {
+    margin: 0 2em 1em auto;
+  }
+
+  /* SideContainer Index */
+
+  .sideContainer {
+    display: none;
+  }
+
+  /* Top/Used-containers */
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
     gap: none;
     transition: gap 0.3s ease-in-out;
   }
 
-  /* Top/Used-containers */
   .topGameContainer,
   .subGameContainer {
     display: flex;
@@ -692,6 +747,10 @@ footer {
 
 /* Landscape Phone - Smaller TABLET */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .sideContainer {
+    display: none;
+  }
+
   .gameContainer-topSellers_index,
   .gamesContainer-usedGames_index {
     gap: none;
@@ -1025,7 +1084,6 @@ footer {
 
 /* Container 1 */
 .detailsSection1 {
-  /* border: 1px solid white; */
 }
 
 .detailsGameTitle {
@@ -1034,9 +1092,10 @@ footer {
 .details-mainImage {
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(16, 28, 45);
 }
 
 .detailsGenreContainer {
@@ -1050,7 +1109,6 @@ footer {
 
 /* Container 2 */
 .detailsSection2 {
-  /* border: 1px solid white; */
   margin: 5em 3em;
   height: 600px;
 }
@@ -1066,25 +1124,26 @@ footer {
 }
 
 .detailsBuyNow-btn {
+  background-color: #ffaa34;
 }
 .detailsBuyNow-btn:hover {
-  background-color: rgb(255, 184, 51);
+  background-color: #feb54d;
   color: black;
 }
 
 .detailsCart-btn {
-  background-color: rgb(20, 150, 20);
+  background-color: rgb(0, 95, 150);
 }
 .detailsCart-btn:hover {
-  background-color: rgb(0, 200, 0);
+  background-color: rgb(20, 138, 206);
   color: black;
 }
 .detailsWishlist-btn {
-  background-color: darkcyan;
+  background-color: rgb(0, 95, 150);
 }
 
 .detailsWishlist-btn:hover {
-  background-color: rgb(121, 212, 212);
+  background-color: rgb(20, 138, 206);
   color: black;
 }
 
@@ -1105,97 +1164,61 @@ footer {
 
 /* Smaller MOBILE */
 @media only screen and (max-width: 349px) and (max-height: 680) {
-  .productDetailsContainer {
-    display: block;
-    margin: 0 10px 0 10px;
+  /* Container 1 */
+  .details-mainImage {
+    height: 225px;
+  }
+
+  /* Container 2 */
+  .detailsSection2 {
+    margin: 2em 0 1em 0;
   }
 }
 
 /* Larger MOBILE */
 @media only screen and (max-width: 479px) and (max-height: 960px) {
-  .productDetailsContainer {
-    display: block;
-    margin: 0 10px 0 10px;
-  }
-
-  .productDetailsContainer {
-  }
-
   /* Container 1 */
-
   .details-mainImage {
     height: 250px;
   }
 
   /* Container 2 */
-  /* .detailsSection2 {
-    height: 600px;
-    margin-top: 80px;
+  .detailsSection2 {
+    margin: 2em 0 1em 0;
   }
-
-  .detailsPrice {
-    margin-left: 40px;
-  }
-  .detailsBuyNow-btn,
-  .detailsCart-btn,
-  .detailsWishlist-btn {
-    display: block;
-    width: 50%;
-    height: 50px;
-    margin: 0 auto 10px auto;
-    border-radius: 5px;
-    font-weight: 700;
-  }
-
-  .detailsBuyNow-btn {
-    background-color: orange;
-  }
-  .detailsBuyNow-btn:hover {
-    background-color: rgb(255, 184, 51);
-    color: black;
-  }
-
-  .detailsCart-btn {
-    background-color: rgb(20, 150, 20);
-  }
-  .detailsCart-btn:hover {
-    background-color: rgb(0, 200, 0);
-    color: black;
-  }
-  .detailsWishlist-btn {
-    background-color: darkcyan;
-  }
-
-  .detailsWishlist-btn:hover {
-    background-color: rgb(121, 212, 212);
-    color: black;
-  }
-
-  .detailsGameInfo li:not(.detailsPlatforms li) {
-    margin-bottom: 30px;
-  }
-
-  .detailsPlatforms {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  } */
 }
 
 /* Landscape Phone - Smaller TABLET */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .productDetailsContainer {
-    display: block;
-    margin: 0 20px 0 20px;
+    margin: 0 1em 0 1em;
+  }
+
+  /* Container 1 */
+  .details-mainImage {
+    height: 275px;
+  }
+
+  /* Container 2 */
+  .detailsSection2 {
+    margin: 2em 0 1em 0;
   }
 }
 
 /* Standard TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .productDetailsContainer {
-    display: block;
-    margin: 0 20px 0 20px;
+    margin: 0 2em 0 2em;
+  }
+
+  /* Container 1 */
+  .details-mainImage {
+    height: 325px;
+  }
+
+  /* Container 2 */
+  .detailsSection2 {
+    margin: 2em 0 2em 0;
   }
 }
 
@@ -1204,7 +1227,11 @@ footer {
   .productDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0 50px 0 50px;
+    margin: 0 1.5em 0 1.5em;
+  }
+  /* Container 1 */
+  .details-mainImage {
+    height: 350px;
   }
 }
 
@@ -1213,7 +1240,7 @@ footer {
   .productDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0 50px 0 50px;
+    margin: 0 3em 0 3em;
   }
 }
 
@@ -1222,7 +1249,7 @@ footer {
   .productDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0 50px 0 50px;
+    margin: 0 4em 0 4em;
   }
 }
 
@@ -1231,7 +1258,7 @@ footer {
   .productDetailsContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0 50px 0 50px;
+    margin: 0 5em 0 5em;
   }
 }
 

@@ -36,7 +36,7 @@ gameContainer.innerHTML = `
                                                     gameDetails.platforms.platform6].filter(Boolean).map((platform) => `
                                                 <li>${platform}</li>`).join(' |')}
                                                 </ul>
-                                    <div class="gamePrice">Price: 299.99 NOK</div>
+                                    <div class="gamePrice">299.99 NOK</div>
                                 </section>
                             </section>
                         </a>`;
