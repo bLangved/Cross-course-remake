@@ -7,14 +7,18 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-
-const url = "https://api.rawg.io/api/games/" + id + "?key=2657f7a3a75c46e79175cef89041b30b";
+const baseUrl = "https://api.rawg.io/api/games/";
+const apiKey ="?key=4efa6663671c47a38765f4de9cc9868c";
+const newUrl = baseUrl + id + apiKey;
+const proxy = "https://noroffcors.onrender.com/";
+const corsEnabledUrl = proxy + newUrl;
 
 async function fetchSelectedGame(){
 
     try{
-    const response = await fetch(url);
+    const response = await fetch(corsEnabledUrl);
     const details = await response.json();
+    console.log(corsEnabledUrl);
 
     const gameDetails = {
         name: details.name ?? "No name available",

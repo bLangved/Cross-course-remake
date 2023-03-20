@@ -2,14 +2,17 @@ import { containerHtmlIndex } from "./createHtmlIndex.js";
 import { validatePropertyLengthIndex } from "./validateLength.js";
 import { fetchTopSellers, fetchUsedGames} from "./apiLoops.js";
 
+const baseUrl = "https://api.rawg.io/api/games/4200";
+const apiKey ="?key=4efa6663671c47a38765f4de9cc9868c";
+const newUrl = baseUrl + apiKey;
+const proxy = "https://noroffcors.onrender.com/";
+const corsEnabledUrl = proxy + newUrl;
+
 
 async function fetchGames(){
-
     try{
-        const url = `https://api.rawg.io/api/games/4200?key=2657f7a3a75c46e79175cef89041b30b`;
-        const response = await fetch(url);
+        const response = await fetch(corsEnabledUrl);
         const details = await response.json();
-        // console.log(details);
 
  // Get the first set number of sentences from the description
  const sentences = details.description?.split(/[.!?]/) ?? [];
@@ -28,7 +31,6 @@ const gameDetails = {
     } 
 
 validatePropertyLengthIndex(details, gameDetails);
-
 containerHtmlIndex(gameDetails);
     
 }
@@ -37,13 +39,9 @@ catch(error) {
 }
 
 }
+// Calling the function in this js.file for generating top container on index.html
 fetchGames();
 
+//Calling the functions from apiLoops.js for generating game-containers on index.html
 fetchTopSellers();
 fetchUsedGames();
-
-
-
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const id = params.get("id");

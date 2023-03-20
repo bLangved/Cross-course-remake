@@ -1,4 +1,4 @@
-import { topGamesList, usedGamesList } from "./apiLoops.js";
+// import { topGamesList, usedGamesList } from "./apiLoops.js";
 
 const gameContainer = document.querySelector(".gameContainer_index")
 const sideGamesContainer = document.querySelector(".sideGamesContainer_index")
@@ -52,7 +52,7 @@ sideGamesContainer.innerHTML += `
 }
 }
 
-let numContainers = 5;
+let numContainers = 3;
 
 export function generateTopSellersContainer(topGamesList){
 let topGamesHtml = '';
@@ -94,41 +94,35 @@ let usedGamesHtml = '';
 usedGameContainer.innerHTML = usedGamesHtml;
 }
 
-function updateContainers(topGamesList, usedGamesList){
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 500) {
-        numContainers = 5;
-    }
-    if (screenWidth > 750) {
-        numContainers = 6;
-    }
-    if (screenWidth > 1000) {
-        numContainers = 6;
-    }
-    if(screenWidth > 1250){
-        numContainers = 8;
-    }
-    if(screenWidth > 1500){
-        numContainers = 10;
-    }
-    if(screenWidth > 1750){
-        numContainers = 12;
-    }
-    if(screenWidth > 2000){
-        numContainers = 7;
-    }
-    generateTopSellersContainer(topGamesList);
-    generateUsedGamesContainer(usedGamesList);
-    }
-    window.addEventListener('resize', function() {
-        updateContainers(topGamesList, usedGamesList);
-      });
 
 
 
-// function updateContainers(){
-//     // generateTopSellersContainer(topGamesList, numContainers);
-//     generateUsedGamesContainer(usedGamesList, numContainers);
-// }
+// This function can update amount of containers displayed on the page based on screenwidth in px. 
+// Currently deactivated, since there is a limit on 20k GET request to API pr. month, and the APILoops.js is being reduced to only creating 4 containers
+// per section for limiting how many requests I do per refresh on index.html. May enable this again in the future. 
 
-// window.addEventListener('resize', updateContainers);
+// Import statement at top with "topGamesList, usedGamesList" from apiLoops.js is for this function to work.
+
+// function updateContainers(topGamesList, usedGamesList){
+//     const screenWidth = window.innerWidth;
+//     if (screenWidth < 750) {
+//         numContainers = 5;
+//     }
+//     if (screenWidth > 1000) {
+//         numContainers = 3;
+//     }
+//     if(screenWidth > 1200){
+//         numContainers = 4;
+//     }
+//     if(screenWidth > 1600){
+//         numContainers = 5;
+//     }
+
+//     generateTopSellersContainer(topGamesList);
+//     generateUsedGamesContainer(usedGamesList);
+//     }
+
+//     window.addEventListener('resize', function() {
+//         updateContainers(topGamesList, usedGamesList);
+//     });
+
