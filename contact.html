@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>GameHub - Home</title>
-    <meta name="description" content="GameHub Home" />
+    <title>GameHub - Contact</title>
+    <meta name="description" content="GameHub Contact" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/style.css" rel="stylesheet" />
@@ -14,62 +14,99 @@
 <body>
 
     <header>
+
         <section class="global-banner">
             <nav class="navList-banner">
                 <ul class="listColumn1_banner">
-                    <li><a href="index.html">
+                    <li class="logo-store"><a href="index.html">
                             <img src="/images/banner/gamehub-logo.png" alt="GameHub logo" class="logo-banner" />
                         </a></li>
                     <li><a id="link-store" href="index.html">Store</a></li>
-                    <li class="active-page"><a id="link-contact" href="contact.html">Contact</a></li>
+                    <li class="active-page page-indicator"><a id="link-contact" href="contact.html">Contact</a></li>
                     <li><a id="link-about" href="about.html">About</a></li>
                 </ul>
                 |
                 <ul class="listColumn2_banner">
                     <li><a href="wishlist.html">Wishlist</a></li>
                     <li><a href="cart.html">Cart</a></li>
-                    <li>
-                        <div class="account-banner">
-                            <i class="fa fa-user-circle fa-xl account-icon" aria-hidden="true"></i>
-                            <div class="account-status-banner">Sign in</div>
-                        </div>
-
-
+                    <li><a href="signIn.html">
+                            <div class="account-banner">
+                                <i class="fa fa-user-circle fa-xl account-icon" aria-hidden="true"></i>
+                                <div class="account-status-banner">Sign in</div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </section>
 
-        <section class="globalSearchbar">
-            <input type="text" class="searchbarInput" placeholder="Search...">
-            <button class="searchbar-btn" type="submit"><i class="fa fa-search aria-hidden=" true=""></i></button>
+        <section class="global-banner_mobile">
+            <section class="hamburgerMenu_mobile">
+                <label class="hamburger-icon_mobile" for="nav-trigger">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </label>
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <nav class="navList-banner">
+                    <ul class="listColumn-banner_mobile">
+                        <li><a id="link-store" href="index.html">Store</a></li>
+                        <hr>
+                        <li><a id="link-contact" href="contact.html">Contact</a></li>
+                        <hr>
+                        <li><a id="link-about" href="about.html">About</a></li>
+                        <hr>
+                        <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
+                        <hr>
+                        <li><a id="link-signIn" href="signIn.html">Sign in</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="logo-banner_mobile">
+                <a href="index.html">
+                    <img src="/images/banner/gamehub-logo-text.png" alt="GameHub logo" class="logo-banner" />
+                </a>
+            </section>
+            <section class="cart-banner_mobile">
+                <a class="cart-icon_mobile" id="link-cart" href="cart.html"><i
+                        class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+            </section>
         </section>
+        <section class="globalSearbarContainer">
+            <section class="globalSearchbar">
+                <form class="searchbar-form">
+                    <input type="text" class="searchbar-input" placeholder="Search...">
+                    <button class="searchbar-btn" type="submit"><i class="fa fa-search aria-hidden="
+                            true=""></i></button>
+                </form>
+            </section>
+        </section>
+
     </header>
 
     <main>
 
-        <section class="infoContainer_contact">
-            <section class="section1_contact">
-                <h1 class="header1_contact header_contact">What’s on your mind?</h1>
-                <p class="para1_contact para_contact">Sometimes you got questions. We all do. At Game Hub we have an
+        <section class="container_contact">
+
+            <section class="topSection_contact">
+                <h1 class="topHeader_contact">What’s on your mind?</h1>
+                <p class="topPara_contact">Sometimes you got questions. We all do. At Game Hub we have an
                     amazing customer
                     support staff that is there for you.</p>
             </section>
-            <section class="section2_contact">
-                <h2 class="header2_contact header_contact">Send us a message anytime!</h2>
-                <p class="para2_contact para_contact">Our customer staff are allways ready to help you out if you
+            <section class="section_contact">
+                <div class="img_contact img1_contact"></div>
+                <h2 class="header_contact">Send us a message anytime!</h2>
+                <p class="para_contact">Our customer staff are allways ready to help you out if you
                     need
                     our help. Send
                     us a message on the chat, and we will answer as soon as we can. </p>
-                <div class="imgSection2_contact img_contact"></div>
             </section>
-            <section class="section3_contact">
-                <h2 class="header3_contact header_contact">It’s sometimes better hearing a voice</h2>
-                <p class="para3_contact para_contact">Sometimes it’s easier to just pick up the phone when you have
+            <section class="section_contact">
+                <div class="img_contact img2_contact"></div>
+                <h2 class="header_contact">It’s sometimes better hearing a voice</h2>
+                <p class="para_contact">Sometimes it’s easier to just pick up the phone when you have
                     some
                     questions.
                     Call us on +47 00112233 </p>
-                <div class="imgSection3_contact img_contact"></div>
             </section>
 
             <section class="formHeaderContainer_contact">
@@ -137,16 +174,6 @@
                     </a>
                 </li>
                 <li class="some-icon">
-                    <a href="www.instagram.com">
-                        <div class="some-icon3" alt="Instagram icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.twitch.com">
-                        <div class="some-icon4" alt="Twitch icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
                     <a href="www.twitter.com">
                         <div class="some-icon5" alt="Twitter icon"></div>
                     </a>
@@ -175,10 +202,13 @@
             |
             <a href="index.html" class="footer_policy">Store refound policy</a>
         </nav>
+
     </footer>
 
-    <!-- <script type="module" src="js/script.js"></script> -->
     <script src="/js/contactForm.js"></script>
+    <script src="js/components/hamburgerMenu.js" defer></script>
+    <script src="js/components/searchbar.js" defer></script>
+
 </body>
 
 </html>

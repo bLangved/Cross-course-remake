@@ -1,5 +1,5 @@
 const detailsContainer = document.querySelector(".productDetailsContainer");
-
+const pageTitle = document.querySelector(".pageTitle_productDetails");
 
 /* Creating HTML for productDetails.html */
 export function detailsCreateHtml(gameDetails) {
@@ -21,7 +21,7 @@ export function detailsCreateHtml(gameDetails) {
                                 </section>
 
                             <section class="detailsSection2">
-                                <h2 class="detailsPrice">Price NOK</h2>
+                                <h2 class="detailsPrice">300.00 NOK</h2>
                                 <button class="detailsBuyNow-btn">BUY NOW</button>
                                 <button class="detailsCart-btn">ADD TO CART</button>
                                 <button class="detailsWishlist-btn">ADD TO WISHLIST</button>
@@ -52,6 +52,44 @@ export function detailsCreateHtml(gameDetails) {
                                 </section>
                             </section>
                         </section>`;
+
 detailsContainer.innerHTML += detailsHtml;
+pageTitle.innerHTML = `GameHub - ${gameDetails.name}`;
+
+
+const addToCartBtn = document.querySelector(".detailsCart-btn");
+    addToCartBtn.addEventListener("click", () => {
+    const cartProduct = {
+        name: gameDetails.name,
+        image: gameDetails.mainImg
+    };
+    localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
+
+    // Add animation class to button
+    addToCartBtn.classList.add("button-animation");
+      
+    // Remove animation class after animation completes
+    setTimeout(() => {
+      addToCartBtn.classList.remove("button-animation");
+    }, 2500);
+    });
+
+const addToWishlistBtn = document.querySelector(".detailsWishlist-btn ");
+addToWishlistBtn.addEventListener("click", () => {
+const wishlistProduct = {
+    name: gameDetails.name,
+    image: gameDetails.mainImg
+};
+localStorage.setItem("wishlistProduct", JSON.stringify(wishlistProduct));
+
+// Add animation class to button
+addToWishlistBtn.classList.add("button-animation");
+    
+// Remove animation class after animation completes
+setTimeout(() => {
+    addToWishlistBtn.classList.remove("button-animation");
+}, 2500);
+});
+
 };
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>GameHub - Product</title>
+    <title class="pageTitle_productDetails"></title>
     <meta name="description" content="GameHub productDetails" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,19 +42,23 @@
 
         <section class="global-banner_mobile">
             <section class="hamburgerMenu_mobile">
-                <div class="hamburger-icon_mobile">
-                    <input type="checkbox" id="nav-trigger" class="nav-trigger">
-                    <label for="nav-trigger"><i class="fa-solid fa-bars fa-2xl"></i></label>
-                    <nav class="navList-banner">
-                        <ul class="listColumn-banner_mobile">
-                            <li><a id="link-store" href="index.html">Store</a></li>
-                            <li><a id="link-contact" href="contact.html">Contact</a></li>
-                            <li><a id="link-about" href="about.html">About</a></li>
-                            <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
-                            <li><a id="link-signIn" href="signIn.html">Sign in</li>
-                        </ul>
-                    </nav>
-                </div>
+                <label class="hamburger-icon_mobile" for="nav-trigger">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </label>
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <nav class="navList-banner">
+                    <ul class="listColumn-banner_mobile">
+                        <li><a id="link-store" href="index.html">Store</a></li>
+                        <hr>
+                        <li><a id="link-contact" href="contact.html">Contact</a></li>
+                        <hr>
+                        <li><a id="link-about" href="about.html">About</a></li>
+                        <hr>
+                        <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
+                        <hr>
+                        <li><a id="link-signIn" href="signIn.html">Sign in</li>
+                    </ul>
+                </nav>
             </section>
             <section class="logo-banner_mobile">
                 <a href="index.html">
@@ -66,7 +70,7 @@
                         class="fa-solid fa-cart-shopping fa-2xl"></i></a>
             </section>
         </section>
-        <section class="globalSearbarContainer">
+        <section class="globalSearbarContainer globalSearchbar_productsDetails">
             <section class="globalSearchbar">
                 <form class="searchbar-form">
                     <input type="text" class="searchbar-input" placeholder="Search...">
@@ -99,16 +103,6 @@
                     </a>
                 </li>
                 <li class="some-icon">
-                    <a href="www.instagram.com">
-                        <div class="some-icon3" alt="Instagram icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.twitch.com">
-                        <div class="some-icon4" alt="Twitch icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
                     <a href="www.twitter.com">
                         <div class="some-icon5" alt="Twitter icon"></div>
                     </a>
@@ -137,6 +131,7 @@
             |
             <a href="index.html" class="footer_policy">Store refound policy</a>
         </nav>
+
     </footer>
 
     <script type="module" src="js/createHtmlDetails.js"></script>

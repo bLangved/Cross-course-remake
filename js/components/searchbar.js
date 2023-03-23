@@ -1,11 +1,13 @@
-const form = document.querySelector('.searchbar-form');
-const input = form.querySelector('input[type="text"]');
-const button = form.querySelector('.searchbar-btn');
+const formSearchbar = document.querySelector('.searchbar-form');
+if(formSearchbar){
+const inputSearchbar = formSearchbar.querySelector('input[type="text"]');
+const buttonSearchbar = formSearchbar.querySelector('.searchbar-btn');
 
-form.addEventListener('submit', (event) => {
+formSearchbar.addEventListener('submit', (event) => {
   event.preventDefault();
-  const searchTerm = input.value.trim();
+  const searchTerm = inputSearchbar.value.trim();
   if (searchTerm) {
     window.location.href = `/search?q=${searchTerm}`;
   }
 });
+}

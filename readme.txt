@@ -53,6 +53,11 @@ General Media queries viewports sizes
 @media only screen and (min-width: 376px) and (max-width: 489px) and (orientation: portrait){
 }
 
+/* LANDSCAPE orientation MOBILE */ 
+/* Seems like it gets affected by large tablet landscape orientation, but works allright. Some minor adjustments makes it work. */
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+}
+
 /* Smaller TABLET */
 @media only screen and (min-width: 480px) and (max-width: 767px){
 }

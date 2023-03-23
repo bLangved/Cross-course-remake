@@ -81,7 +81,7 @@ function checkLength(value, length) {
 }
 
 // Checking the customer number passed in, to see if it passes validation
-function validateCustomerNumber(customerNumber, length) {
+function validateCustomerNumber(customerNumber) {
     if (customerNumber === "") {
         return true;
     }

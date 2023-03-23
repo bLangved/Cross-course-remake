@@ -8,7 +8,7 @@ const usedGameContainer = document.querySelector(".gamesContainer-usedGames_inde
 
 export function containerHtmlIndex(gameDetails){
 gameContainer.innerHTML = `
-                        <a href="productDetails.html?id=${gameDetails.id}">
+                        <a href="details.html?id=${gameDetails.id}">
                             <section class="GameContainer">
                                 <section class="gameContainer-1">
                                     <div class="gameMainImage" style="background-image: url('${gameDetails.mainImg}')"></div>
@@ -36,14 +36,14 @@ gameContainer.innerHTML = `
                                                     gameDetails.platforms.platform6].filter(Boolean).map((platform) => `
                                                 <li>${platform}</li>`).join(' |')}
                                                 </ul>
-                                    <div class="gamePrice">299.99 NOK</div>
+                                    <div class="gamePrice">300.00 NOK</div>
                                 </section>
                             </section>
                         </a>`;
 
 for(let i = 0; i < 4; i++){
 sideGamesContainer.innerHTML += `
-                                <a href="productDetails.html?id=${gameDetails.id}">
+                                <a href="details.html?id=${gameDetails.id}">
                                     <div class="sideContainer">
                                         <div class="sideGameImg" style="background-image: url('${gameDetails.mainImg}')"></div>
                                         <div class="sideGameTitle">${gameDetails.name}</div>          
@@ -59,7 +59,7 @@ let topGamesHtml = '';
 
     for(let i = 0; i < numContainers; i++){
     topGamesHtml += ` 
-                    <a href="productDetails.html?id=${topGamesList[i].id}">
+                    <a href="details.html?id=${topGamesList[i].id}">
                         <section class="topGameContainer">
                             <div class="topGameImg" style="background-image: url('${topGamesList[i].mainImg}')"></div>
                             <div class="topGameText">
@@ -76,7 +76,7 @@ export function generateUsedGamesContainer(usedGamesList){
 let usedGamesHtml = '';
     for(let i = 0; i < numContainers; i++){
         usedGamesHtml += `                           
-                        <a href="productDetails.html?id=${usedGamesList[i].id}">
+                        <a href="details.html?id=${usedGamesList[i].id}">
                             <section class="subGameContainer">
                                 <div class="subGameImg" style="background-image: url('${usedGamesList[i].mainImg}')"></div>
                                 <div class="subGameText">

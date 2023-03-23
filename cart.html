@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>GameHub - Home</title>
-    <meta name="description" content="GameHub Home" />
+    <title>GameHub - Cart</title>
+    <meta name="description" content="GameHub cart" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/style.css" rel="stylesheet" />
@@ -21,14 +21,14 @@
                     <li class="logo-store"><a href="index.html">
                             <img src="/images/banner/gamehub-logo.png" alt="GameHub logo" class="logo-banner" />
                         </a></li>
-                    <li class="active-page page-indicator"><a id="link-store" href="index.html">Store</a></li>
+                    <li><a id="link-store" href="index.html">Store</a></li>
                     <li><a id="link-contact" href="contact.html">Contact</a></li>
                     <li><a id="link-about" href="about.html">About</a></li>
                 </ul>
                 |
                 <ul class="listColumn2_banner">
                     <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+                    <li class="active-page page-indicator"><a href="cart.html">Cart</a></li>
                     <li><a href="signIn.html">
                             <div class="account-banner">
                                 <i class="fa fa-user-circle fa-xl account-icon" aria-hidden="true"></i>
@@ -42,19 +42,23 @@
 
         <section class="global-banner_mobile">
             <section class="hamburgerMenu_mobile">
-                <div class="hamburger-icon_mobile">
-                    <input type="checkbox" id="nav-trigger" class="nav-trigger">
-                    <label for="nav-trigger"><i class="fa-solid fa-bars fa-2xl"></i></label>
-                    <nav class="navList-banner">
-                        <ul class="listColumn-banner_mobile">
-                            <li><a id="link-store" href="index.html">Store</a></li>
-                            <li><a id="link-contact" href="contact.html">Contact</a></li>
-                            <li><a id="link-about" href="about.html">About</a></li>
-                            <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
-                            <li><a id="link-signIn" href="signIn.html">Sign in</li>
-                        </ul>
-                    </nav>
-                </div>
+                <label class="hamburger-icon_mobile" for="nav-trigger">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </label>
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <nav class="navList-banner">
+                    <ul class="listColumn-banner_mobile">
+                        <li><a id="link-store" href="index.html">Store</a></li>
+                        <hr>
+                        <li><a id="link-contact" href="contact.html">Contact</a></li>
+                        <hr>
+                        <li><a id="link-about" href="about.html">About</a></li>
+                        <hr>
+                        <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
+                        <hr>
+                        <li><a id="link-signIn" href="signIn.html">Sign in</li>
+                    </ul>
+                </nav>
             </section>
             <section class="logo-banner_mobile">
                 <a href="index.html">
@@ -82,31 +86,17 @@
 
         <h1 class="mainHeader_cart">Your shopping cart</h1>
 
-        <section class="cartContainer_cart">
+        <section class="container_cart">
+            <!-- Holds the products in cart.html -->
+            <section class="productsContainer_cart"></section>
 
-            <section class="productContainer_cart">
-                <div class="productImg_cart"></div>
-                <div class="productInfo_cart">
-                    <div class="productTitle_cart">Name of the game</div>
-                    <div class="productPlatform_cart">Platform: </div>
-                </div>
-                <div class="priceInfo_cart">
-                    <div class="productPrice_cart">00.00 NOK</div>
-                    <div class="productRemove_cart">Remove</div>
-                </div>
+            <section class="purchaseContainer_cart"></section>
+            <section class="infoContainer_cart"></section>
+
+            <section class="emptyContainer_cart">
+                <div class="empty_cart">Cart is currently empty. Add some games to it!</div>
             </section>
 
-            <section class="purchaseContainer_cart">
-                <div class="totalPrice_cart">Total price:</div>
-                <div class="totalPrice-sum_cart">00.00 NOK</div>
-                <button class="buyNow-btn_cart">Buy now</button>
-            </section>
-
-            <section class="infoContainer_cart">
-                <p class="tax-Para_cart">All prices includes tax</p>
-                <div class="emptyCart_cart">Empty cart</div>
-                <a href="index.html"><button class="backToStore-btn_cart">Continue shopping</button></a>
-            </section>
         </section>
 
     </main>
@@ -124,16 +114,6 @@
                 <li class="some-icon">
                     <a href="www.youtube.com">
                         <div class="some-icon2" alt="Youtube icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.instagram.com">
-                        <div class="some-icon3" alt="Instagram icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.twitch.com">
-                        <div class="some-icon4" alt="Twitch icon"></div>
                     </a>
                 </li>
                 <li class="some-icon">
@@ -165,9 +145,13 @@
             |
             <a href="index.html" class="footer_policy">Store refound policy</a>
         </nav>
+
     </footer>
 
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/createHtmlDetails.js"></script>
+    <script src="js/createHtmlCart.js"></script>
+    <script src="js/components/hamburgerMenu.js" defer></script>
+    <script src="js/components/searchbar.js" defer></script>
 </body>
 
 </html>

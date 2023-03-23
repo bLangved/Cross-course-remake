@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>GameHub - Product</title>
-    <meta name="description" content="GameHub Home" />
+    <title>GameHub - About</title>
+    <meta name="description" content="GameHub About" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/style.css" rel="stylesheet" />
@@ -21,9 +21,9 @@
                     <li class="logo-store"><a href="index.html">
                             <img src="/images/banner/gamehub-logo.png" alt="GameHub logo" class="logo-banner" />
                         </a></li>
-                    <li class="active-page page-indicator"><a id="link-store" href="index.html">Store</a></li>
+                    <li><a id="link-store" href="index.html">Store</a></li>
                     <li><a id="link-contact" href="contact.html">Contact</a></li>
-                    <li><a id="link-about" href="about.html">About</a></li>
+                    <li class="active-page page-indicator"><a id="link-about" href="about.html">About</a></li>
                 </ul>
                 |
                 <ul class="listColumn2_banner">
@@ -42,19 +42,23 @@
 
         <section class="global-banner_mobile">
             <section class="hamburgerMenu_mobile">
-                <div class="hamburger-icon_mobile">
-                    <input type="checkbox" id="nav-trigger" class="nav-trigger">
-                    <label for="nav-trigger"><i class="fa-solid fa-bars fa-2xl"></i></label>
-                    <nav class="navList-banner">
-                        <ul class="listColumn-banner_mobile">
-                            <li><a id="link-store" href="index.html">Store</a></li>
-                            <li><a id="link-contact" href="contact.html">Contact</a></li>
-                            <li><a id="link-about" href="about.html">About</a></li>
-                            <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
-                            <li><a id="link-signIn" href="signIn.html">Sign in</li>
-                        </ul>
-                    </nav>
-                </div>
+                <label class="hamburger-icon_mobile" for="nav-trigger">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </label>
+                <input type="checkbox" id="nav-trigger" class="nav-trigger">
+                <nav class="navList-banner">
+                    <ul class="listColumn-banner_mobile">
+                        <li><a id="link-store" href="index.html">Store</a></li>
+                        <hr>
+                        <li><a id="link-contact" href="contact.html">Contact</a></li>
+                        <hr>
+                        <li><a id="link-about" href="about.html">About</a></li>
+                        <hr>
+                        <li><a id="link-wishlist" href="wishlist.html">Wishlist</a></li>
+                        <hr>
+                        <li><a id="link-signIn" href="signIn.html">Sign in</li>
+                    </ul>
+                </nav>
             </section>
             <section class="logo-banner_mobile">
                 <a href="index.html">
@@ -81,34 +85,51 @@
 
     <main>
 
-        <section class="contentContainer_about">
+        <section class="container_about">
 
-            <h1 class="Header_about">Many companies are selling games. <br>
-                Why don’t you?</h1>
-            <section class="section1_about">
-                <p class="para1_about">GameHub is an all online game service, where users can purchase new, and sell
+            <section class="topSection_about">
+                <h1 class="topHeader_about">Many companies are selling games. <br>
+                    Why don’t you?</h1>
+                <p class="para1_about">GameHub is an all online game-service, where users can purchase new, and sell
                     their existing digital games. Have you ever bought a game, and realized you never actually played
                     it? Maybe you have played through your favorite game way to many times, and figured it is time to
                     move on to another. Why keep it?</p>
                 <p class="para1-2_about">We know the feeling, and that’s what Game Hub is all about.</p>
             </section>
             <section class="section2_about">
+                <div class="section2-img_about"></div>
                 <h2 class="section2-header_about">How does it work?</h2>
                 <p class="para2_about">Put your games out for sale, and we will automatically set a fair price based on
                     the marked value of the game. When another user has bought your game, we will wire the money to your
                     account. Game Hub takes a small fee for every game sold, but we fix everything for you. </p>
-                <div class="section2-img_about"></div>
             </section>
             <section class="section3_about">
-                <h2 class="section3-header_about">How does it work?</h2>
-                <p class="para3_about">Put your games out for sale, and we will automatically set a fair price based on
-                    the marked value of the game. When another user has bought your game, we will wire the money to your
-                    account. Game Hub takes a small fee for every game sold, but we fix everything for you. </p>
                 <div class="section3-img_about"></div>
+                <h2 class="section3-header_about">Why would I sell my games?</h2>
+                <p class="para3_about">As we said earlier, why keep games you won't be comming back to? We at GameHub
+                    are
+                    all die hard gamers at heart, and we know the feeling of old games being piled up (no pun intended,
+                    you know; digital games!), and never being played again. Sometimes you buy games, and they don't
+                    have any real replay value, so you finish it, and leave it be. Other times, you buy way to many
+                    games on sale, and never end up playing them. Why keep it? We are pretty sure there are many others
+                    who would love to play those games, but don't want to pay full price. Sell it! </p>
+            </section>
+            <section class="section4_about">
+                <div class="section4-img_about"></div>
+                <h2 class="section4-header_about">How do I get started?</h2>
+                <p class="para4_about">Getting started is really simple! Just follow these steps:
+                </p>
+                <ul class="list4_about">
+                    <li>Create and log in to your GameHub-account</li>
+                    <li>Navigate to the "sell games" tab in the header section on the webpage / dropdown
+                        hamburger-menu on mobile </li>
+                    <li>Choose "list new game for sale", and follow the instructions</li>
+                    <li>When someone buys your game, you will recieve a notification in the notification center on
+                        "Your Page", and the money will be wired to your account</li>
+                </ul>
             </section>
 
         </section>
-
 
     </main>
 
@@ -124,16 +145,6 @@
                 <li class="some-icon">
                     <a href="www.youtube.com">
                         <div class="some-icon2" alt="Youtube icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.instagram.com">
-                        <div class="some-icon3" alt="Instagram icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.twitch.com">
-                        <div class="some-icon4" alt="Twitch icon"></div>
                     </a>
                 </li>
                 <li class="some-icon">
@@ -165,10 +176,11 @@
             |
             <a href="index.html" class="footer_policy">Store refound policy</a>
         </nav>
+
     </footer>
 
-    <script type="module" src="js/createHtml.js"></script>
-    <!-- <script type="module" src="js/script.js"></script> -->
+    <script src="js/components/hamburgerMenu.js" defer></script>
+    <script src="js/components/searchbar.js" defer></script>
 </body>
 
 </html>
