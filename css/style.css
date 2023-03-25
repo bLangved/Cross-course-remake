@@ -1277,6 +1277,11 @@ footer {
     width: 315px;
   }
 
+  /* Right Container */
+  .gameContainer-2 p {
+    font-size: 0.85rem;
+  }
+
   .topGameImg,
   .subGameImg {
     grid-row: 1;
