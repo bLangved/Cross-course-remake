@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>GameHub - Cart</title>
-    <meta name="description" content="GameHub cart" />
+    <title>GameHub - Privacy policy</title>
+    <meta name="description" content="GameHub Privacy policy" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/style.css" rel="stylesheet" />
@@ -36,12 +36,12 @@
                         </a></li>
                     <li><a id="link-store" href="index.html">Store</a></li>
                     <li><a id="link-contact" href="contact.html">Contact</a></li>
-                    <li><a id="link-about" href="about.html">About</a></li>
+                    <li class="active-page page-indicator"><a id="link-about" href="about.html">About</a></li>
                 </ul>
                 |
                 <ul class="listColumn2_banner">
                     <li><a href="wishlist.html">Wishlist</a></li>
-                    <li class="active-page page-indicator"><a href="cart.html">Cart</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li><a href="signIn.html">
                             <div class="account-banner">
                                 <i class="fa fa-user-circle fa-xl account-icon" aria-hidden="true"></i>
@@ -95,25 +95,39 @@
 
     </header>
 
+
     <main>
 
-        <h1 class="mainHeader_cart">Your shopping cart</h1>
+        <section class="container_privacyPolicy">
 
-        <section class="container_cart">
-            <!-- Holds the products in cart.html -->
-            <section class="productsContainer_cart"></section>
-
-            <section class="purchaseContainer_cart"></section>
-            <section class="infoContainer_cart"></section>
-
-            <section class="emptyContainer_cart">
-                <div class="empty_cart">Cart is currently empty. Add some games to it!</div>
+            <section class="section_privacyPolicy">
+                <h1 class="header_privacyPolicy">Copyright</h1>
+                <p class="para_privacyPolicy">
+                    © 2023 GameHub Corporation. All rights reserved. GameHub and the GameHub logo are trademarks and/or
+                    registered trademarks of GameHub Corporation. All other trademarks are property of their respective
+                    owners.
+                </p>
+            </section>
+            <section class="section_privacyPolicy">
+                <h2 class="header_privacyPolicy">Third Party Legal Notices</h2>
+                <p class="para_privacyPolicy">
+                    GamHub and other GamHub products distributed via gameHub service does not use much third
+                    party-stuff. Nothing big to worry about here, really. We actually care very much for your privacy.
+                </p>
+            </section>
+            <section class="section_privacyPolicy">
+                <h2 class="header_privacyPolicy">Claims of Copyright Infringement</h2>
+                <p class="para_privacyPolicy">
+                    GameHub respects the intellectual property rights of others, and we ask that everyone using our
+                    internet sites and services do the same. Anyone who believes that their work has been reproduced in
+                    one of our internet sites or services in a way that constitutes copyright infringement may notify
+                    GameHub via <a class="contactLink_privacyPolicy" href="contact.html">this page</a>.
+                </p>
             </section>
 
         </section>
 
     </main>
-
 
     <footer>
 
@@ -165,8 +179,6 @@
 
     </footer>
 
-    <script type="module" src="js/createHtmlDetails.js"></script>
-    <script src="js/createHtmlCart.js"></script>
     <script src="js/components/hamburgerMenu.js" defer></script>
     <script src="js/components/searchbar.js" defer></script>
 </body>

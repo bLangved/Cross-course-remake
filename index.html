@@ -75,7 +75,7 @@
             </section>
             <section class="logo-banner_mobile">
                 <a href="index.html">
-                    <img src="/images/banner/gamehub-logo-text.png" alt="GameHub logo" class="logo-banner" />
+                    <div class="logo-banner"></div>
                 </a>
             </section>
             <section class="cart-banner_mobile">
@@ -98,62 +98,110 @@
     <main>
 
         <h1 class="gameContainerHeader">Recommended</h1>
+
+
+        <!-- Container-->
         <section class="topGameContainer_index">
             <section class="gameContainer_index"></section>
             <section class="sideGamesContainer_index"></section>
+
+            <!-- LOADING ANIMATION-->
+            <div class="loadingContainer" id="loadingContainer1">
+                <div class="loadingText">Loading games</div>
+                <div id="loadingAnimation"></div>
+            </div>
+            <div class="results">
+                <div class="errorMessage"></div>
+            </div>
+
         </section>
+
+
         <h2 class="topSellersHeader">Top Sellers</h2>
-        <section class="gameContainer-topSellers_index"></section>
+
+
+        <!-- Container-->
+        <section class="gameContainer-topSellers_index">
+
+            <!-- LOADING ANIMATION-->
+            <div class="loadingContainer" id="loadingContainer2">
+                <div class="loadingText">Loading games</div>
+                <div id="loadingAnimation"></div>
+            </div>
+            <div class="results">
+                <div class="errorMessage"></div>
+            </div>
+
+        </section>
+
 
         <h2 class="usedGamesHeader">Used Games</h2>
-        <section class="gamesContainer-usedGames_index"></section>
+
+
+        <!-- Container-->
+        <section class="gamesContainer-usedGames_index">
+
+            <!-- LOADING ANIMATION-->
+            <div class="loadingContainer" id="loadingContainer3">
+                <div class="loadingText">Loading games</div>
+                <div id="loadingAnimation"></div>
+            </div>
+            <div class="results">
+                <div class="errorMessage"></div>
+            </div>
+
+        </section>
 
     </main>
 
 
     <footer>
 
-        <section class="some-icons_footer">
-            <ul class="some-icons-ul_footer">
-                <li class="some-icon">
-                    <a href="www.facebook.com">
-                        <div class="some-icon1" alt="Facebook icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.youtube.com">
-                        <div class="some-icon2" alt="Youtube icon"></div>
-                    </a>
-                </li>
-                <li class="some-icon">
-                    <a href="www.twitter.com">
-                        <div class="some-icon5" alt="Twitter icon"></div>
-                    </a>
-                </li>
-            </ul>
+        <section class="container_footer">
+
+            <section class="some-icons_footer">
+                <ul class="some-icons-ul_footer">
+                    <li class="some-icon">
+                        <a href="https://www.facebook.com/">
+                            <div class="some-icon1" alt="Facebook icon"></div>
+                        </a>
+                    </li>
+                    <li class="some-icon">
+                        <a href="https://www.youtube.com/">
+                            <div class="some-icon2" alt="Youtube icon"></div>
+                        </a>
+                    </li>
+                    <li class="some-icon">
+                        <a href="https://twitter.com/">
+                            <div class="some-icon3" alt="Twitter icon"></div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="hr-line">
+                <hr>
+            </div>
+
+            <p class="copyright_footer">
+                © 2022, Game hub, Inc. All rights reserved. Game Hub, and the Game Hub logo are
+                trademarks or registered
+                trademarks of Game Hub, Inc. In Norway and elsewhere. Other brands or product names are the trademarks
+                of
+                their respective owners. </p>
+
+            <div class="hr-line">
+                <hr>
+            </div>
+
+            <nav class="policy_footer">
+                <a href="termsOfService.html" class="policy1_footer">Terms of service</a>
+                |
+                <a href="privacyPolicy.html" class="policy2_footer">Privacy policy</a>
+                |
+                <a href="storeRefoundPolicy.html" class="policy3_footer">Store refound policy</a>
+            </nav>
         </section>
-
-        <div class="hr-line">
-            <hr>
-        </div>
-
-        <p class="copyright-section_footer reg-para-style">
-            © 2022, Game hub, Inc. All rights reserved. Game Hub, and the Game Hub logo are
-            trademarks or registered
-            trademarks of Game Hub, Inc. In Norway and elsewhere. Other brands or product names are the trademarks of
-            their respective owners. </p>
-
-        <div class="hr-line">
-            <hr>
-        </div>
-
-        <nav class="policy_footer">
-            <a href="index.html" class="footer_policy">Terms of service</a>
-            |
-            <a href="index.html" class="footer_policy">Privacy policy</a>
-            |
-            <a href="index.html" class="footer_policy">Store refound policy</a>
-        </nav>
 
     </footer>
 
@@ -161,6 +209,7 @@
     <script type="module" src="js/createHtmlIndex.js"></script>
     <script type="module" src="js/apiLoops.js"></script>
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/components/loadingAnimation.js" defer></script>
     <script src="js/components/hamburgerMenu.js" defer></script>
     <script src="js/components/searchbar.js" defer></script>
 </body>

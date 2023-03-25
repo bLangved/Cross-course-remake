@@ -16,22 +16,23 @@ button {
 button {
   width: 200px;
   height: 50px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-transform: uppercase;
   color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
   background-color: #ffaa34;
 }
 
 button:hover {
-  background-color: darkorange;
+  box-shadow: 3px 3px 5px black;
+  transition: 0.1s ease-in;
 }
 
 .small-btn {
   width: 100px;
   height: 40px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-transform: uppercase;
   color: white;
   border-radius: 3px;
@@ -41,20 +42,30 @@ button:hover {
 
 input,
 textarea {
-  border-radius: 5px;
   border: none;
-  font-size: 1em;
+  border-radius: 5px;
+  font-size: 1rem;
   line-height: 1.5em;
-  height: 2.5em;
+  height: 2.75em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-input:focus {
-  outline: 2px solid #ffaa34;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-radius: 5px;
+  border: 0.2em solid #4a90e2;
 }
 
 input::placeholder,
 textarea::placeholder {
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  padding-left: 0.15em;
+}
+
+label {
+  display: block;
+  margin-bottom: -1em;
 }
 
 p {
@@ -62,13 +73,64 @@ p {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+
+/* - Hide class - */
+.hidden {
+  display: none;
+}
+
+/* - LOADING ANIMATION - */
+.loadingContainer {
+  display: none;
+  text-align: center;
+}
+
+.loadingText {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+/* --- Loading animation --- */
+#loadingAnimation {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto 0 auto;
+  border: 10px solid #ffffff;
+  border-top-color: #ffaa34;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* --- --- */
+
+.results {
+  padding: 10px;
+}
+
+.errorMessage {
+  display: none;
+  width: fit-content;
+  border: 2px solid darkred;
+  background-color: rgb(232, 190, 190);
+  color: darkred;
+  padding: 20px;
+  font-size: 1.5rem;
 }
 
 /* --- BODY --- */
@@ -78,7 +140,7 @@ body {
   margin: 0;
   /* Reg. global font style */
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 400;
   background-color: rgb(40, 40, 40);
   color: #f2f2f2;
@@ -99,7 +161,7 @@ header {
 
 .global-banner {
   display: inline-flex;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin: 0 auto;
   /* border: 1px solid black; */
 }
@@ -108,7 +170,7 @@ header {
   display: inline-flex;
   align-items: center;
   height: 90px;
-  font-size: 0.9em;
+  font-size: 1.35rem;
 }
 
 .navList-banner li {
@@ -180,10 +242,10 @@ header {
   width: 250px;
 }
 
-.searchbar-input:hover,
 .searchbar-input:focus {
   transition: 0.3s ease-in;
   width: 450px;
+  border: none;
 }
 
 .searchbar-btn {
@@ -208,9 +270,9 @@ header {
   }
   .hamburgerMenu_mobile {
     flex: 1;
-    text-align: center;
-    margin-left: 1.5em;
-    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hamburger-icon_mobile {
@@ -241,7 +303,7 @@ header {
     position: absolute;
     text-transform: uppercase;
     height: fit-content;
-    top: 5.5em;
+    top: 4.42em;
     right: 0.1em;
     width: 100%;
     border-radius: 0 0 5px 5px;
@@ -251,7 +313,7 @@ header {
   }
 
   .navList-banner li {
-    font-size: 1.5em;
+    font-size: 1.3rem;
     padding: 0.75em 1em 1em 0;
     text-align: start;
   }
@@ -269,22 +331,22 @@ header {
   }
 
   .logo-banner_mobile {
-    flex: 3;
-    align-items: center;
-    text-align: center;
-    font-size: 1.3em;
-    padding: 8px;
-    margin: 5px;
+    flex: 1;
+    padding: 1em;
   }
 
   .logo-banner {
+    background: url(/images/banner/gamehub-logo-text.png) no-repeat;
+    background-size: contain;
+    width: 10em;
+    margin: auto;
   }
 
   .cart-banner_mobile {
     flex: 1;
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* - SEARCHBAR - */
@@ -299,48 +361,6 @@ header {
   }
 }
 
-/* Smaller MOBILE (ref. iPhone 5) */
-@media only screen and (max-width: 320px) and (orientation: portrait) {
-  .global-banner_mobile {
-    margin-top: 0.3em;
-  }
-
-  .logo-banner_mobile {
-    font-size: 1em;
-    margin: 0;
-  }
-
-  .logo-banner {
-  }
-  .cart-banner_mobile {
-    padding: 0 5px 0 0;
-    margin: 0;
-  }
-}
-
-/* Medium MOBILE (ref. iPhone 8 & 11 Pro) */
-@media only screen and (min-width: 321px) and (max-width: 375px) and (orientation: portrait) {
-  .global-banner_mobile {
-    margin-top: 0.3em;
-  }
-
-  .logo-banner_mobile {
-    font-size: 1.15em;
-    margin: 0;
-  }
-
-  .logo-banner {
-  }
-  .cart-banner_mobile {
-    padding: 5px;
-    margin: 0;
-  }
-}
-
-/* Larger MOBILE (ref. iPhone 12 & 14 Pro Max) */
-@media only screen and (min-width: 376px) and (max-width: 489px) and (orientation: portrait) {
-}
-
 /* LANDSCAPE orientation MOBILE */
 @media only screen and (max-width: 950px) and (orientation: landscape) {
   .global-banner {
@@ -352,12 +372,11 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-
   .hamburgerMenu_mobile {
     flex: 1;
-    text-align: center;
-    margin-left: 1em;
-    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hamburger-icon_mobile {
@@ -383,21 +402,22 @@ header {
 
   .navList-banner {
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
     z-index: 1;
+    opacity: 0;
     position: absolute;
     text-transform: uppercase;
     height: fit-content;
-    top: 5.15em;
+    top: 4.42em;
     right: 0.1em;
     width: 100%;
-    background-color: rgb(60, 60, 60);
     border-radius: 0 0 5px 5px;
-    opacity: 0;
+    background-color: rgb(60, 60, 60);
+    box-shadow: 0 0.5em 5px black;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .navList-banner li {
-    font-size: 1.5em;
+    font-size: 1rem;
     padding: 0.75em 1em 1em 0;
     text-align: start;
   }
@@ -415,26 +435,26 @@ header {
   }
 
   .logo-banner_mobile {
-    flex: 3;
-    align-items: center;
-    text-align: center;
-    font-size: 1.3em;
-    padding: 8px;
-    margin: 5px;
+    flex: 1;
+    padding: 1em;
   }
 
   .logo-banner {
-  }
-  .cart-banner_mobile {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
+    background: url(/images/banner/gamehub-logo-text.png) no-repeat;
+    background-size: contain;
+    width: 10em;
+    margin: auto;
   }
 
+  .cart-banner_mobile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   /* - SEARCHBAR - */
   .searchbar-form input[type="text"] {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .searchbar-input {
@@ -463,7 +483,7 @@ header {
   }
 
   .navList-banner {
-    font-size: 0.8em;
+    font-size: 1.2rem;
   }
 }
 
@@ -603,28 +623,34 @@ footer {
   background: rgb(60, 60, 60);
 }
 
+.container_footer {
+  width: 70em;
+  margin: 0 auto;
+}
+
 .hr-line {
   width: 95%;
   margin: 0 auto;
+  opacity: 0.5;
 }
 
 .some-icons_footer {
   display: flex;
-  width: 100%;
 }
 
 .some-icons-ul_footer {
-  display: inline-flex;
+  display: flex;
+  padding-left: 0;
   gap: 30px;
-  margin: 10px auto 5px auto;
+  margin: 0.5em auto 0 auto;
 }
 
 .some-icon1,
 .some-icon2,
 .some-icon3 {
   background-size: cover;
-  width: 35px;
-  height: 35px;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 .some-icon1:hover,
@@ -652,14 +678,113 @@ footer {
   background-image: url("/images/footer/some-icons/twitter-icon-color.png");
 }
 
-.copyright-section_footer,
-.policy_footer {
-  padding: 0 50px 20px 50px;
+.copyright_footer {
+  font-size: 0.9rem;
+  width: 92.5%;
+  margin: 0 auto;
 }
 
 .policy_footer {
+  font-size: 0.9rem;
+  width: 92.5%;
+  margin: 0 auto;
+  padding: 1em 0 4em 0;
   display: flex;
-  gap: 15px;
+  gap: 1em;
+}
+
+/* - MOBILE - */
+/* ALL handheld DEVICES with PORTRAIT mode */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .container_footer {
+    width: 100%;
+  }
+
+  .hr-line {
+    max-width: 95%;
+  }
+
+  .some-icon1,
+  .some-icon2,
+  .some-icon3 {
+    width: 2em;
+    height: 2em;
+  }
+
+  .copyright_footer {
+    font-size: 0.75rem;
+  }
+
+  .policy_footer {
+    font-size: 0.75rem;
+  }
+
+  .policy1_footer {
+    margin-left: auto;
+  }
+  .policy3_footer {
+    margin-right: auto;
+  }
+}
+
+/* Smaller MOBILE (ref. iPhone 5) */
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  .copyright_footer {
+    font-size: 0.65rem;
+  }
+
+  .policy_footer {
+    font-size: 0.65rem;
+    gap: 0.6em;
+  }
+}
+
+/* Medium MOBILE (ref. iPhone 8 & 11 Pro) */
+@media only screen and (min-width: 321px) and (max-width: 375px) and (orientation: portrait) {
+  .copyright_footer {
+    font-size: 0.7rem;
+  }
+
+  .policy_footer {
+    font-size: 0.7rem;
+    gap: 0.6em;
+  }
+}
+
+/* Larger MOBILE (ref. iPhone 12 & 14 Pro Max) */
+@media only screen and (min-width: 376px) and (max-width: 489px) and (orientation: portrait) {
+}
+
+/* LANDSCAPE orientation MOBILE */
+/* Seems like it gets affected by large tablet landscape orientation, but works allright. Some minor adjustments makes it work. */
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  .container_footer {
+    width: 100%;
+  }
+
+  .copyright_footer {
+    font-size: 0.6rem;
+  }
+
+  .policy_footer {
+    font-size: 0.9rem;
+    gap: 0.8em;
+  }
+}
+
+/* Smaller TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Standard TABLET (ref. iPad Air 4.gen (PORTRAIT orientation))*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* larger TABLET (ref. iPad Air 4.gen (LANDSCAPE orientation)) - Smaller DESKTOP */
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .container_footer {
+    width: 100%;
+  }
 }
 
 /* --- INDEX --- */
@@ -681,6 +806,7 @@ footer {
 .gameContainer_index {
   grid-column: 1;
   box-shadow: 5px 5px 5px rgb(16, 28, 45);
+  border-radius: 5px;
 }
 
 .GameContainer {
@@ -702,6 +828,7 @@ footer {
   background-size: cover;
   width: 100%;
   height: 100%;
+  border-radius: 5px 0 0 0;
 }
 
 /* Right Container */
@@ -709,6 +836,7 @@ footer {
   grid-area: details;
   background: rgb(16, 28, 45);
   padding: 1em 1.5em;
+  border-radius: 0 5px 0 0;
 }
 
 .gameTitle {
@@ -728,6 +856,8 @@ footer {
   display: flex;
   background: rgb(30, 53, 84);
   align-items: center;
+  /* border-radius: 0 0 5px 5px; */
+  border-radius: 0 0 5px 5px;
 }
 
 .gamePlatform {
@@ -738,12 +868,14 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
+  width: 60%;
 }
 
 .gamePrice {
   background-color: rgb(67, 67, 67);
   padding: 0.5em;
   margin: 0 1em 0 auto;
+  border-radius: 5px;
 }
 
 /* SideContainer Index */
@@ -797,7 +929,7 @@ footer {
   background: rgb(30, 53, 84);
   box-shadow: 5px 5px 5px rgb(16, 28, 45);
   height: 250px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .topGameContainer:hover,
@@ -826,6 +958,7 @@ footer {
   white-space: nowrap;
   padding: 0.6em 0.3em;
   margin: 0 1em 0 auto;
+  border-radius: 5px;
 }
 
 /* Used games - subGameContainer */
@@ -833,10 +966,11 @@ footer {
 .subGamePriceContainer {
   display: flex;
   align-items: center;
-  gap: 0.2em;
+  gap: 1.2em;
   margin: 0 1em 0 auto;
-  height: 2.5em;
-  padding: 0.3em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 5px;
   text-align: center;
   background-color: rgb(67, 67, 67);
 }
@@ -847,11 +981,13 @@ footer {
 }
 
 .subGameOldPrice {
+  line-height: 1.75em;
   text-decoration: line-through;
   color: rgb(160, 160, 160);
 }
 
 .subGameNewPrice {
+  line-height: 1.75em;
   font-weight: 600;
   color: rgb(162, 255, 23);
 }
@@ -878,17 +1014,17 @@ footer {
   }
 
   .gameGenre {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .gameGenres {
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.7em;
+    font-size: 0.7rem;
   }
 
   /* Bottom Container */
   .gameContainer-3 {
-    font-size: 0.7em;
+    font-size: 0.7rem;
     flex-wrap: wrap;
   }
 
@@ -917,7 +1053,7 @@ footer {
   .topGameContainer,
   .subGameContainer {
     display: flex;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     height: 100px;
   }
 
@@ -949,7 +1085,22 @@ footer {
 
   /* Right Container */
   .gameTitle {
-    font-size: 0.875em;
+    font-size: 0.875rem;
+  }
+
+  .gamePlatform {
+    font-size: 0.6rem;
+  }
+
+  .gamePlatforms {
+    font-size: 0.6rem;
+    gap: 0.3em;
+    width: 50%;
+  }
+
+  .topGameTitle,
+  .subGameTitle {
+    font-size: 0.6em;
   }
 }
 
@@ -960,7 +1111,22 @@ footer {
   }
 
   .gameTitle {
-    font-size: 1em;
+    font-size: 1rem;
+  }
+
+  .gamePlatform {
+    font-size: 0.6rem;
+  }
+
+  .gamePlatforms {
+    font-size: 0.6rem;
+    gap: 0.4em;
+    width: 50%;
+  }
+
+  .topGameTitle,
+  .subGameTitle {
+    font-size: 0.7em;
   }
 }
 
@@ -971,7 +1137,20 @@ footer {
   }
 
   .gameTitle {
-    font-size: 1.25em;
+    font-size: 1.25rem;
+  }
+
+  .gamePlatform {
+    font-size: 0.725rem;
+  }
+
+  .gamePlatforms {
+    font-size: 0.725rem;
+    width: 50%;
+  }
+  .topGameTitle,
+  .subGameTitle {
+    font-size: 0.85em;
   }
 }
 
@@ -989,8 +1168,13 @@ footer {
   .topGameContainer,
   .subGameContainer {
     display: flex;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     height: 100px;
+  }
+
+  /* Right Container */
+  .gameContainer-2 p {
+    display: none;
   }
 
   .topGameImg,
@@ -1026,16 +1210,25 @@ footer {
 
   /* Right Container */
   .gameTitle {
-    font-size: 1.35em;
+    font-size: 1.35rem;
   }
 
   .gameGenres {
-    font-size: 0.7em;
+    font-size: 0.7rem;
   }
 
   /* Bottom Container */
   .gameContainer-3 {
-    font-size: 0.75em;
+    font-size: 0.75rem;
+  }
+
+  .gamePlatform {
+    font-size: 0.8rem;
+  }
+
+  .gamePlatforms {
+    font-size: 0.8rem;
+    width: 50%;
   }
 }
 
@@ -1053,19 +1246,19 @@ footer {
   /* Right Container */
   .gameContainer-2 p {
     display: block;
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   .gameGenre {
-    font-size: 1.15em;
+    font-size: 1.15rem;
   }
   .gameGenres {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   /* Bottom Container */
   .gameContainer-3 {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 }
 
@@ -1286,27 +1479,24 @@ footer {
 }
 
 .detailsBuyNow-btn {
-  background-color: #ffaa34;
+  background-color: rgb(100, 160, 0);
 }
 .detailsBuyNow-btn:hover {
-  background-color: #feb54d;
-  color: black;
+  background-color: rgba(80, 130, 0);
 }
 
 .detailsCart-btn {
   background-color: rgb(0, 95, 150);
 }
 .detailsCart-btn:hover {
-  background-color: rgb(20, 138, 206);
-  color: black;
+  background-color: rgb(0, 75, 130);
 }
 .detailsWishlist-btn {
   background-color: rgb(0, 95, 150);
 }
 
 .detailsWishlist-btn:hover {
-  background-color: rgb(20, 138, 206);
-  color: black;
+  background-color: rgb(0, 75, 130);
 }
 
 .detailsGameInfo ul {
@@ -1486,6 +1676,11 @@ footer {
   background-color: rgb(60, 60, 60);
   box-shadow: 5px 5px 5px black;
 }
+
+.section_contact p {
+  text-align: center;
+}
+
 .header_contact {
   grid-area: title;
   margin-bottom: 0.5em;
@@ -1524,7 +1719,6 @@ footer {
 .formContainer_contact input,
 textarea {
   width: 100%;
-  height: 45px;
   box-sizing: border-box;
   margin: 0 auto 15px auto;
 }
@@ -1539,6 +1733,35 @@ textarea {
 .customerSubmit-btn_contact {
   width: 100%;
   margin: 5px auto 20px auto;
+  background-color: rgb(100, 160, 0);
+}
+
+.customerSubmit-btn_contact:hover {
+  background-color: rgba(80, 130, 0);
+}
+
+.customerSubmit-btn_contact:disabled {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+}
+
+/* CONTACT - FORM SUCESS */
+.formSucsess_contact {
+  display: none;
+  transition: 0.3s ease-in;
+  text-align: center;
+  padding: 1em 1em 2.5em 1em;
+  background-color: rgb(80, 80, 80);
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto 2.5em auto;
+}
+
+/* CONTACT - FORM VALIDATION */
+
+.form-error {
+  display: none;
+  color: red;
 }
 
 /* - MOBILE - */
@@ -1547,16 +1770,19 @@ textarea {
   .formContainer_contact {
     width: 100%;
   }
+  .section_contact p {
+    text-align: initial;
+  }
 }
 
 /* Smaller MOBILE (ref. iPhone 5) */
 @media only screen and (max-width: 320px) and (orientation: portrait) {
   .para_contact {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   .header_contact {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .img_contact {
@@ -1568,20 +1794,13 @@ textarea {
 /* Medium MOBILE (ref. iPhone 8 & 11 Pro) */
 @media only screen and (min-width: 321px) and (max-width: 375px) and (orientation: portrait) {
   .header_contact {
-    font-size: 1.75em;
+    font-size: 1.75rem;
   }
 
   .img_contact {
-    width: 6.75em;
-    height: 6.75em;
+    width: 6.75rem;
+    height: 6.75rem;
   }
-}
-
-/* CONTACT - FORM VALIDATION */
-
-.form-error {
-  display: none;
-  color: red;
 }
 
 /* --- ABOUT --- */
@@ -1591,16 +1810,14 @@ textarea {
   padding: 0.5em;
   margin: 0;
 }
-.para1-2_about {
+.topPara-sub_about {
   text-align: center;
   font-weight: bold;
   text-decoration: underline;
   margin: 1em 0 2.5em 0;
 }
 
-.section2_about,
-.section3_about,
-.section4_about {
+.section_about {
   display: grid;
   grid-template-areas:
     ". img ."
@@ -1616,22 +1833,16 @@ textarea {
   box-shadow: 5px 5px 5px black;
 }
 
-.section2-header_about,
-.section3-header_about,
-.section4-header_about {
+.header_about {
   grid-area: title;
   margin-bottom: 0.5em;
   text-align: center;
 }
-.para2_about,
-.para3_about,
-.para4_about {
+.para_about {
   grid-area: para;
 }
 
-.section2-img_about,
-.section3-img_about,
-.section4-img_about {
+.img_about {
   grid-area: img;
   background-image: url(/images/about/questionmark.jpg);
   background-size: cover;
@@ -1641,14 +1852,14 @@ textarea {
   margin: 1em auto;
 }
 
-.list4_about {
+.para-list_about {
   grid-area: ul;
   width: 70%;
   padding: 0 1.5em;
   list-style-type: circle;
 }
 
-.list4_about li:not(:last-child) {
+.para-list_about li:not(:last-child) {
   margin-bottom: 0.75em;
 }
 
@@ -1657,20 +1868,20 @@ textarea {
   .para2_about,
   .para3_about,
   .para4_about {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   .section2-header_about,
   .section3-header_about,
   .section4-header_about {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .section2-img_about,
   .section3-img_about,
   .section4-img_about {
-    width: 6em;
-    height: 6em;
+    width: 6rem;
+    height: 6rem;
   }
 }
 
@@ -1679,14 +1890,14 @@ textarea {
   .section2-header_about,
   .section3-header_about,
   .section4-header_about {
-    font-size: 1.75em;
+    font-size: 1.75rem;
   }
 
   .section2-img_about,
   .section3-img_about,
   .section4-img_about {
-    width: 6.75em;
-    height: 6.75em;
+    width: 6.75rem;
+    height: 6.75rem;
   }
 }
 
@@ -1747,8 +1958,7 @@ textarea {
 }
 
 .login-btn_signIn:hover {
-  background-color: rgb(20, 138, 206);
-  color: black;
+  background-color: rgb(0, 75, 130);
 }
 
 .bottomContainer_signIn {
@@ -1774,8 +1984,7 @@ textarea {
 }
 
 .goBack-btn_signIn:hover {
-  background-color: rgb(20, 138, 206);
-  color: black;
+  background-color: rgb(0, 75, 130);
 }
 
 /* - MOBILE - */
@@ -1826,7 +2035,7 @@ textarea {
 
   /* Form SignIn */
   .header_singIn {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 }
 
@@ -1842,7 +2051,7 @@ textarea {
 
   /* Form SignIn */
   .header_singIn {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 }
 
@@ -1916,6 +2125,12 @@ textarea {
   cursor: pointer;
 }
 
+.productRemove_cart:hover {
+  background: rgb(210, 0, 0);
+  box-shadow: 3px 3px 3px black;
+  transition: 0.1s ease-in-out;
+}
+
 /* - 2.nd CONTAINER - */
 
 .purchaseContainer_cart {
@@ -1938,6 +2153,10 @@ textarea {
   grid-column: 2;
   grid-row: 2;
   margin-left: auto;
+  background-color: rgb(100, 160, 0);
+}
+.buyNow-btn_cart:hover {
+  background-color: rgb(80, 130, 0);
 }
 
 /* - 3.rd CONTAINER - */
@@ -1964,6 +2183,12 @@ textarea {
   cursor: pointer;
 }
 
+.emptyCart_cart:hover {
+  background: rgb(210, 0, 0);
+  box-shadow: 3px 3px 3px black;
+  transition: 0.1s ease-in-out;
+}
+
 .backToStore-btn_cart {
   grid-column: 1;
   grid-row: 2;
@@ -1982,7 +2207,7 @@ textarea {
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .container_cart {
     padding: 0.75em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .product_cart {
@@ -2009,7 +2234,7 @@ textarea {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container_cart {
     padding: 1em;
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .product_cart {
@@ -2100,31 +2325,13 @@ textarea {
   cursor: pointer;
 }
 
+.productRemove_wishlist:hover {
+  background: rgb(210, 0, 0);
+  box-shadow: 3px 3px 3px black;
+  transition: 0.1s ease-in-out;
+}
+
 /* - 2.nd CONTAINER - */
-
-.purchaseContainer_wishlist {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 5px;
-  background: rgb(50, 50, 50);
-}
-
-.totalPrice-sum_wishlist {
-  grid-column: 2;
-  grid-row: 1;
-  margin-left: auto;
-}
-
-.buyNow-btn_wishlist {
-  grid-column: 2;
-  grid-row: 2;
-  margin-left: auto;
-}
-
-/* - 3.rd CONTAINER - */
 .infoContainer_wishlist {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2148,6 +2355,12 @@ textarea {
   cursor: pointer;
 }
 
+.emptyCart_wishlist:hover {
+  background: rgb(210, 0, 0);
+  box-shadow: 3px 3px 3px black;
+  transition: 0.1s ease-in-out;
+}
+
 .backToStore-btn_wishlist {
   grid-column: 1;
   grid-row: 2;
@@ -2166,7 +2379,7 @@ textarea {
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .container_wishlist {
     padding: 0.75em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .product_wishlist {
@@ -2193,7 +2406,7 @@ textarea {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container_wishlist {
     padding: 1em;
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .product_wishlist {
@@ -2214,6 +2427,37 @@ textarea {
     width: 12em;
     height: 4em;
   }
+}
+
+/* --- TERMS OF SERVICE, PRIVACY POLICY, STORE REFOUND POLICY  --- */
+
+.lastUpdated_termsOfService {
+  margin: 2em 0 1em 1em;
+}
+
+.section_termsOfService,
+.section_privacyPolicy,
+.section_storeRefoundPolicy {
+  padding: 1em;
+}
+
+.header_termsOfService,
+.header_privacyPolicy,
+.header_storeRefoundPolicy {
+  margin: 0;
+}
+
+.para_termsOfService,
+.para_privacyPolicy,
+.para_storeRefoundPolicy {
+  background-color: rgb(60, 60, 60);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.contactLink_policy {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* --- Website is not ready --- */

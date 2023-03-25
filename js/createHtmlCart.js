@@ -31,18 +31,16 @@ removeBtn.addEventListener("click", () => {
 localStorage.removeItem("cartProduct");
 location.reload();
 });
-}
-};
-
 
 function purchaseCartContainer(){
     const purchaseHtml = `
                         <div class="totalPrice_cart">Total price:</div>
                         <div class="totalPrice-sum_cart">300.00 NOK</div>
-                        <button class="buyNow-btn_cart">Buy now</button>
+                        <button class="buyNow-btn_cart">Checkout</button>
                         `;
         purchaseContainer.innerHTML = purchaseHtml;                       
 };
+purchaseCartContainer();
 
 
 function infoCartContainer(){
@@ -55,9 +53,19 @@ function infoCartContainer(){
                     `;
     infoContainer.innerHTML = infoHtml;                           
 };
-
+infoCartContainer();
+}
+};
 
 productCartContainer();
-purchaseCartContainer();
-infoCartContainer();
 
+// Get the buyNow-btn_cart button
+const buyNowBtn = document.querySelector(".buyNow-btn_cart");
+
+// Add a click event listener to the button
+buyNowBtn.addEventListener("click", () => {
+  // Redirect to checkout.html
+  window.location.href = "checkout.html";
+  // Empties the product(s) in the cart (since going to checkout). This is a temp. solution, since there will be a real checkout process later
+  localStorage.removeItem("cartProduct");
+});

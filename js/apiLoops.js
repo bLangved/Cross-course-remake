@@ -1,16 +1,19 @@
 import { generateTopSellersContainer, generateUsedGamesContainer } from "./createHtmlIndex.js";
+import { showLoadingAnimation, hideLoadingAnimation } from "./components/loadingAnimation.js"
 
 
 const baseUrl = "https://api.rawg.io/api/games/";
 const apiKey ="?key=4efa6663671c47a38765f4de9cc9868c";
 const proxy = "https://noroffcors.onrender.com/";
 
+const results = document.querySelector(".results")
+results.innerHTML = "";
 
+showLoadingAnimation()
 
 // TOP GAMES CONTAINERS
 export const topGamesList = []; // This is set to export for createHtmlIndex.js (see information for function at bottom) Not in use ATM.
 export async function fetchTopSellers(){
-
     try{
         for(let i = 0; i <= 2; i++){
             
@@ -28,8 +31,11 @@ export async function fetchTopSellers(){
             } 
             topGamesList.push(topGamesDetails);
 }
-        // generate usedGamesContainers on page load
-        generateTopSellersContainer(topGamesList);
+// generate usedGamesContainers on page load
+generateTopSellersContainer(topGamesList);
+
+hideLoadingAnimation();
+
 }
 catch(error) {
     console.log(error);
@@ -39,7 +45,6 @@ catch(error) {
 // USED GAMES CONTAINERS
 export const usedGamesList = []; // This is set to export for createHtmlIndex.js (see information for function at bottom) Not in use ATM.
 export async function fetchUsedGames(){
-
     try{
         for(let i = 0; i <= 2; i++){
 
@@ -59,6 +64,8 @@ export async function fetchUsedGames(){
 }
 // generate topgamesContainers on page load
 generateUsedGamesContainer(usedGamesList);
+
+hideLoadingAnimation();
 }
 catch(error) {
     console.log(error);

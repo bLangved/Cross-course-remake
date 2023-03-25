@@ -83,8 +83,8 @@ let usedGamesHtml = '';
                                         <p class="subGameTitle">${usedGamesList[i].name}</p>
                                         <div class="subGamePriceContainer">
                                             <p class="subGameDiscountPercentage">-30%</p>
-                                            <p class="subGameNewPrice">210.00 NOK</p>  
-                                            <p class="subGameOldPrice">300.00 NOK</p>
+                                            <p class="subGameNewPrice">210.00 <br> NOK</p>  
+                                            <p class="subGameOldPrice">300.00 <br> NOK</p>
                                         </div>
                                     </div>
                                 </div>

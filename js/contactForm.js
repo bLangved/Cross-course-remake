@@ -12,6 +12,9 @@ const subjectError = document.querySelector("#formSubjectError");
 const message = document.querySelector("#formMessage");
 const messageError = document.querySelector("#formMessageError");
 
+const successSection = document.querySelector(".formSucsess_contact");
+const submitButton = document.querySelector(".customerSubmit-btn_contact");
+const headerContact = document.querySelector(".formHeaderContainer_contact");
 
 function validateForm() {
     event.preventDefault();
@@ -65,9 +68,31 @@ function validateForm() {
         messageError.style.display = "block";
         console.log("Message does not meet criteria for input")
     }
+
+  // If all fields are valid, hide the submit button and show the success message section
+  const isFormValid = [fullName, email, subject, message].every((field) => checkLength(field.value, 1) === true);
+  if (isFormValid) {
+      headerContact.style.display = "none";
+      form.style.display = "none";
+      successSection.style.display = "block";
+  }
+
 }
 
+const requiredFields = [fullName, email, subject, message];
+
+requiredFields.forEach((field) => {
+  field.addEventListener("input", () => {
+    const isDisabled = requiredFields.some((field) => !field.value);
+    const submitButton = document.querySelector(".customerSubmit-btn_contact");
+    submitButton.disabled = isDisabled;
+  });
+});
+
+
 form.addEventListener("submit", validateForm);
+
+
 
 
 // Checking the length of the value passed in. 
@@ -107,3 +132,9 @@ function validateEmail(email) {
     const patternMatches = regex.test(email);
     return patternMatches;
 }
+
+
+
+
+
+

@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>GameHub - Cart</title>
-    <meta name="description" content="GameHub cart" />
+    <title>GameHub - Store refound policy</title>
+    <meta name="description" content="GameHub Store refound policy" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/style.css" rel="stylesheet" />
@@ -36,12 +36,12 @@
                         </a></li>
                     <li><a id="link-store" href="index.html">Store</a></li>
                     <li><a id="link-contact" href="contact.html">Contact</a></li>
-                    <li><a id="link-about" href="about.html">About</a></li>
+                    <li class="active-page page-indicator"><a id="link-about" href="about.html">About</a></li>
                 </ul>
                 |
                 <ul class="listColumn2_banner">
                     <li><a href="wishlist.html">Wishlist</a></li>
-                    <li class="active-page page-indicator"><a href="cart.html">Cart</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li><a href="signIn.html">
                             <div class="account-banner">
                                 <i class="fa fa-user-circle fa-xl account-icon" aria-hidden="true"></i>
@@ -95,25 +95,52 @@
 
     </header>
 
+
     <main>
 
-        <h1 class="mainHeader_cart">Your shopping cart</h1>
+        <section class="container_storeRefoundPolicy">
 
-        <section class="container_cart">
-            <!-- Holds the products in cart.html -->
-            <section class="productsContainer_cart"></section>
-
-            <section class="purchaseContainer_cart"></section>
-            <section class="infoContainer_cart"></section>
-
-            <section class="emptyContainer_cart">
-                <div class="empty_cart">Cart is currently empty. Add some games to it!</div>
+            <section class="section_storeRefoundPolicy">
+                <h1 class="header_storeRefoundPolicy">GameHub Refunds</h1>
+                <p class="para_storeRefoundPolicy">
+                    You can request a refund for almost any purchase on GameHub - for any reason. Maybe your PC doesn't
+                    meet the system requirements; maybe you bought a game by mistake; maybe you played the game for an
+                    hour and didn't like it.
+                    <br><br>
+                    It does not matter. GameHub will issue refunds upon request via <a class="contactLink_policy"
+                        href="contact.html">our contact form</a>, for any reason,
+                    as long as the request is made within the specified return period and, in the case of games, if the
+                    game has been played for less than two hours.
+                    <br><br>
+                    You will find more information below, but even if you fall outside the refund terms, you can still
+                    request a refund, and we will look into the matter. Consumers in some jurisdictions may have
+                    additional rights to a refund in cases where a game is faulty.
+                    <br><br>
+                    You will be issued a full refund of your purchase within one week of approval. You receive the money
+                    in your GameHub wallet or through the same payment method you used for the purchase. If, for any
+                    reason, GameHub cannot refund to the original payment method, the full amount will be transferred to
+                    the GameHub Wallet. (Some GameHub payment methods in your country may not support refunds to the
+                    original payment method)
+                </p>
+            </section>
+            <section class="section_storeRefoundPolicy">
+                <h2 class="header_storeRefoundPolicy">When can refunds be used?</h2>
+                <p class="para_storeRefoundPolicy">
+                    GameHub's refund offer applies to games and software from the GameHub store, which were purchased
+                    less than two weeks ago and used for less than two hours.
+                </p>
+            </section>
+            <section class="section_storeRefoundPolicy">
+                <h2 class="header_storeRefoundPolicy">How to request a refund</h2>
+                <p class="para_storeRefoundPolicy">
+                    You can request a refund or get help with GameHub purchases at <a class="contactLink_policy"
+                        href="contact.html">our contact form</a>.
+                </p>
             </section>
 
         </section>
 
     </main>
-
 
     <footer>
 
@@ -165,8 +192,6 @@
 
     </footer>
 
-    <script type="module" src="js/createHtmlDetails.js"></script>
-    <script src="js/createHtmlCart.js"></script>
     <script src="js/components/hamburgerMenu.js" defer></script>
     <script src="js/components/searchbar.js" defer></script>
 </body>

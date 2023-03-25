@@ -1,6 +1,8 @@
 import { containerHtmlIndex } from "./createHtmlIndex.js";
 import { validatePropertyLengthIndex } from "./validateLength.js";
 import { fetchTopSellers, fetchUsedGames} from "./apiLoops.js";
+import { showLoadingAnimation, hideLoadingAnimation } from "./components/loadingAnimation.js"
+
 
 const baseUrl = "https://api.rawg.io/api/games/4200";
 const apiKey ="?key=4efa6663671c47a38765f4de9cc9868c";
@@ -8,6 +10,10 @@ const newUrl = baseUrl + apiKey;
 const proxy = "https://noroffcors.onrender.com/";
 const corsEnabledUrl = proxy + newUrl;
 
+const results = document.querySelector(".results")
+results.innerHTML = "";
+
+showLoadingAnimation()
 
 async function fetchGames(){
     try{
@@ -30,12 +36,15 @@ const gameDetails = {
         description: filteredDescription ?? "No description available",
     } 
 
-validatePropertyLengthIndex(details, gameDetails);
-containerHtmlIndex(gameDetails);
+    validatePropertyLengthIndex(details, gameDetails);
+    containerHtmlIndex(gameDetails);
     
+    hideLoadingAnimation();
 }
 catch(error) {
-    console.log(error);
+    hideLoadingAnimation();
+    console.log("Error while fetching API:", error);
+    results.innerHTML = displayError(error);
 }
 
 }
@@ -45,3 +54,9 @@ fetchGames();
 //Calling the functions from apiLoops.js for generating game-containers on index.html
 fetchTopSellers();
 fetchUsedGames();
+
+
+// 10s delay before functions starts. Used to check various things like animations etc. 
+// setTimeout(fetchGames, 10000);
+// setTimeout(fetchTopSellers, 10000);
+// setTimeout(fetchUsedGames, 10000);
