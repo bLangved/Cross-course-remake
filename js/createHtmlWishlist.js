@@ -16,6 +16,7 @@ function productwishlistContainer(){
                             </div>
                             <div class="priceInfo_wishlist">
                                 <div class="productPrice_wishlist">300.00 NOK</div>
+                                <button class="moveToCart-btn_wishlist">Add to cart</button>
                                 <div class="productRemove_wishlist">Remove</div>
                             </div>
                         </section>
@@ -47,4 +48,10 @@ infowishlistContainer();
 productwishlistContainer();
 
 
-
+const moveToCartBtn = productContainer.querySelector(".moveToCart-btn_wishlist");
+moveToCartBtn.addEventListener("click", () => {
+  // localStorage.setItem("wishlistProduct", JSON.stringify(wishlistProduct));
+  localStorage.removeItem("wishlistProduct");
+  location.reload();
+  console.log(localStorage)
+});

@@ -303,7 +303,7 @@ header {
     position: absolute;
     text-transform: uppercase;
     height: fit-content;
-    top: 4.42em;
+    top: 3em;
     right: 0.1em;
     width: 100%;
     border-radius: 0 0 5px 5px;
@@ -407,7 +407,7 @@ header {
     position: absolute;
     text-transform: uppercase;
     height: fit-content;
-    top: 4.42em;
+    top: 3em;
     right: 0.1em;
     width: 100%;
     border-radius: 0 0 5px 5px;
@@ -1506,6 +1506,7 @@ footer {
 
 .detailsGameInfo ul {
   padding: 0;
+  cursor: default;
 }
 
 .detailsGameInfo li:not(.detailsPlatforms li) {
@@ -2284,7 +2285,7 @@ textarea {
 .product_wishlist {
   display: grid;
   grid-template-columns: 20% 45% 35%;
-  height: 7em;
+  height: fit-content;
   padding: 1em;
   margin-bottom: 1em;
   background: rgb(50, 50, 50);
@@ -2308,21 +2309,33 @@ textarea {
   margin-left: 1em;
 }
 
-.productPlatform_wishlist {
-}
-
 .priceInfo_wishlist {
   grid-column: 3;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin-left: auto;
 }
 
 .productPrice_wishlist {
   grid-row: 1;
+  margin-left: auto;
 }
-.productRemove_wishlist {
+
+.moveToCart-btn_wishlist {
   grid-row: 2;
+  height: 3em;
+  width: 6em;
+  margin-left: auto;
+  margin-bottom: 1em;
+  background-color: rgb(100, 160, 0);
+}
+
+.moveToCart-btn_wishlist:hover {
+  background-color: rgb(80, 130, 0);
+}
+
+.productRemove_wishlist {
+  grid-row: 3;
   margin: auto 0 0 auto;
   padding: 0.5em;
   background: red;
@@ -2352,7 +2365,7 @@ textarea {
 }
 .emptyCart_wishlist {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   margin: auto 0 auto auto;
   padding: 0.5em;
   background: red;
@@ -2389,21 +2402,19 @@ textarea {
 
   .product_wishlist {
     padding: 0.75em;
-    height: 5em;
   }
 
-  .purchaseContainer_wishlist {
-    padding: 0.75em;
+  .moveToCart-btn_wishlist {
+    height: 2.5em;
+    width: fit-content;
   }
 
   .infoContainer_wishlist {
     padding: 0.75em;
   }
 
-  .buyNow-btn_wishlist,
-  .backToStore-btn_wishlist {
-    width: 10em;
-    height: 3.5em;
+  .product_wishlist {
+    grid-template-columns: 30% 35% 35%;
   }
 }
 
@@ -2416,21 +2427,10 @@ textarea {
 
   .product_wishlist {
     padding: 1em;
-    height: 7em;
-  }
-
-  .purchaseContainer_wishlist {
-    padding: 1em;
   }
 
   .infoContainer_wishlist {
     padding: 1em;
-  }
-
-  .buyNow-btn_wishlist,
-  .backToStore-btn_wishlist {
-    width: 12em;
-    height: 4em;
   }
 }
 
