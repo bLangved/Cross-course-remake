@@ -45,7 +45,7 @@ export function detailsCreateHtml(gameDetails) {
                                                 gameDetails.platforms.platform4, 
                                                 gameDetails.platforms.platform5, 
                                                 gameDetails.platforms.platform6].filter(Boolean).map((platform) => `
-                                            <li>${platform}</li>`).join('')}
+                                            <li>${platform}</li>`).join(' |')}
                                             </ul>
                                         </li>
                                     </ul>
