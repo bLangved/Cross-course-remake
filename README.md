@@ -1,68 +1,74 @@
-# Your project title
+# Game Hub - Cross Course Assigment
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![GameHub_Logo](https://github.com/bLangved/Cross-course-remake/assets/101604131/53d3822c-52c9-4853-a3c9-365a6a488adc)
 
-A simple overview of the use/purpose of the project.
+
+A project website for users to buy / sell used computer and console games. 
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This project was a school assignment where I was supposed to create a website for users to buy and / sell used computer or console games. 
+We were assigned assets like logo, name, slogan and images. I used an API from https://rawg.io/ instead, and fetched data there for game-content.
 
-You can add some bullet points if you'd like to:
+Website might be a bit slow to load in first time visiting when fetching data first time around, but give it a little time. Usually responds pretty quick after that.  
 
-- List item 1
-- List item 2
-- List item 3
+The website contains the following pages:
+
+- Main page
+- Product specific Page (when you click on a random game)
+- Contact page
+- About page
+- Cart page
+- Wishlist page
+- Checkout page
+- SignIn / SignUp page
+- My account / User page
+- Reset password page
+- Store refound policy page
+- Terms of service page
+
+### Target audience was: 
+Aged 18 to 25 who are interested in computer games, and would either like to purchase games or would like to sell games they have finished playing.
 
 ## Built With
 
-You can list a the tech stack that you've used over here
+This website was built using the languages: 
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- HTML 5
+- CSS
+- Javascript 
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
+Clone this repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
+git clone https://github.com/bLangved/Cross-course-remake.git
 ```
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+Contains some static files, but the user needs an API key to fetch the data from the database. Sign up to https://rawg.io/ to get one. 
+- Update all API key-variables in js-files with your own API key. 
 
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+User might also get errors retrieving data without running through a CORS Proxy. 
+- Update all proxy-variables in js-files with your own proxy. 
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+As this project was a school assigment, it is not open for contributions.
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+To get in contact with me regarding this project, please use one of the below options:
 
-[My LinkedIn page]([www.linkedin.com](https://www.linkedin.com/in/bj%C3%B8rnar-heian-langved-23157b246/))
+[My LinkedIn page](https://www.linkedin.com/in/bj%C3%B8rnar-heian-langved-23157b246/)
+<br>
+Discord User name: Langved#4769
 
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+[Noroff - School of technology and digital media](https://www.noroff.no/en)
