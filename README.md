@@ -32,7 +32,7 @@ Aged 18 to 25 who are interested in computer games, and would either like to pur
 
 ## Built With
 
-This website was built using the languages: 
+This website was built using the following languages:
 
 - HTML 5
 - CSS
